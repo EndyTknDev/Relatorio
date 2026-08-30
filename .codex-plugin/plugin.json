@@ -1,0 +1,22 @@
+{
+  "name": "relatorio-plugin",
+  "version": "0.1.0",
+  "description": "Cria relatórios padronizados de assistência social preservando os modelos oficiais.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Relatórios de Assistência Social",
+    "shortDescription": "Relatórios oficiais a partir de modelos padronizados.",
+    "longDescription": "Cria, revisa e organiza relatórios de assistência social usando modelos oficiais sem alterar os arquivos originais.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": ["Document generation", "Document review"],
+    "defaultPrompt": [
+      "Crie um relatório de assistência social usando o modelo oficial.",
+      "Revise este relatório conforme as regras do modelo.",
+      "Organize o relatório na pasta de saída do mês e ano corretos."
+    ]
+  }
+}
