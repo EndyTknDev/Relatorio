@@ -1,0 +1,4 @@
+interface:
+  display_name: "Relatório Técnico de Meio Ambiente"
+  short_description: "Cria relatórios técnicos ambientais a partir do modelo"
+  default_prompt: "Use $relatorio-tecnico-meio-ambiente para criar um relatório técnico de meio ambiente seguindo o modelo oficial."

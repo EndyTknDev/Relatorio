@@ -1,0 +1,14 @@
+{
+  "name": "relatorios-locais",
+  "owner": {
+    "name": "Local developer"
+  },
+  "description": "Marketplace local com o plugin de geração de relatórios e pareceres técnicos deste repositório.",
+  "plugins": [
+    {
+      "name": "relatorio-plugin",
+      "source": "./",
+      "description": "Gera relatórios de assistência social, pareceres técnicos da Defesa Civil e relatórios técnicos de meio ambiente a partir de modelos oficiais preservados, sem alterar a estilização original."
+    }
+  ]
+}

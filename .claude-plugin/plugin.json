@@ -1,0 +1,8 @@
+{
+  "name": "relatorio-plugin",
+  "version": "0.1.0",
+  "description": "Gera relatórios de assistência social, pareceres técnicos da Defesa Civil e relatórios técnicos de meio ambiente a partir de modelos oficiais preservados, sem alterar a estilização original.",
+  "author": {
+    "name": "Local developer"
+  }
+}

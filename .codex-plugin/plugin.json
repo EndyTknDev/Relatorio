@@ -1,7 +1,7 @@
 {
   "name": "relatorio-plugin",
   "version": "0.1.0",
-  "description": "Cria relatórios padronizados de assistência social preservando os modelos oficiais.",
+  "description": "Cria relatórios de assistência social, pareceres técnicos da Defesa Civil e relatórios técnicos de meio ambiente preservando os modelos oficiais.",
   "author": {
     "name": "Local developer"
   },
