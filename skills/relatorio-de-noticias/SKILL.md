@@ -24,7 +24,7 @@ Antes de qualquer ação, leia e aplique integralmente [as regras padrão do plu
    - imagem esquerda do cabeçalho;
    - imagem direita do cabeçalho.
 5. Se a finalidade das duas imagens não estiver evidente, peça que o usuário indique qual deve ocupar cada lado. Não use os logotipos de Acará presentes no modelo: eles identificam outro município e não servem como imagem padrão nem como espaço reservado.
-6. Se o usuário pedir para não usar nenhuma imagem em um lado ou nos dois, não trate isso como dado ausente a ignorar nem prossiga sem definir a mídia final. Aplique a regra compartilhada 4: explique que o modelo não comporta um quadro vazio, confirme que a alternativa será uma imagem neutra em branco no(s) lado(s) indicado(s) e só prossiga após a confirmação.
+6. Se o usuário pedir para não usar imagens, aplique as regras compartilhadas 4 e 6: verifique o contrato real dos slots e preserve sua estrutura. Não simule preenchimento com imagens em branco. Resolva divergências entre o modelo e a documentação antes da edição das imagens.
 7. Não substitua uma informação ausente por dados do modelo nem pela data atual. Aguarde os dados obrigatórios antes de iniciar.
 
 ## Pesquisa das notícias
@@ -50,7 +50,7 @@ Antes de qualquer ação, leia e aplique integralmente [as regras padrão do plu
    - `ESTADO DO <ESTADO>`;
    - `MUNICÍPIO DE <MUNICÍPIO>`;
    - `PREFEITURA MUNICIPAL DE <MUNICÍPIO>`.
-4. Substitua as duas imagens do cabeçalho pelas imagens fornecidas pelo usuário, respeitando a indicação de lado. Preserve os quadros, dimensões, posição, alinhamento e ancoragem existentes. Mantenha a proporção das imagens; quando necessário, use ajuste de contenção com fundo transparente ou branco, sem deformá-las. Se o usuário confirmou, na etapa anterior, que um lado ou os dois ficarão sem imagem, substitua apenas o conteúdo binário da mídia por uma imagem em branco neutra do mesmo formato e proporção — nunca exclua o elemento de desenho, o quadro ou a relação, e nunca reconstrua o cabeçalho.
+4. Preencha os slots do cabeçalho com as imagens autorizadas, respeitando a indicação de lado e o contrato verificado do modelo. Preserve quadros, dimensões, posição, alinhamento, proporção e ancoragem. Não use imagens em branco para simular slots vazios nem reconstrua o cabeçalho. A ausência autorizada de imagem deve seguir as regras compartilhadas 4 e 6.
 5. Preserve o título `RELATÓRIO DE NOTÍCIAS`.
 6. Substitua o subtítulo por `<Desastre> no município de <Município>/<UF>` e o ano pelo ano da data informada. Normalize a sigla da UF a partir do estado confirmado pelo usuário.
 7. Em cada um dos três blocos:
@@ -70,7 +70,7 @@ Antes de qualquer ação, leia e aplique integralmente [as regras padrão do plu
 - Verifique que a saída conserva 27 parágrafos no corpo, 2 seções, nenhuma tabela, 2 imagens de cabeçalho, 3 capturas de notícias e 3 legendas.
 - Teste os três hiperlinks e confirme que cada captura corresponde ao link imediatamente anterior e à legenda imediatamente posterior.
 - Confirme que as legendas estão numeradas de 1 a 3 e que cada uma identifica título, veículo e data de publicação.
-- Renderize todas as páginas e inspecione-as visualmente. Se o ambiente não permitir renderização, faça as verificações estruturais disponíveis e informe a limitação.
+- Compare visualmente todas as páginas do modelo e da saída conforme a seção 6 das regras padrão. Sem essa inspeção, a saída permanece rascunho não validado e não pode ser entregue como final.
 - Entregue sempre um único arquivo `.docx` com a estilização padrão do modelo.
 - Na mensagem final, além do DOCX, forneça os três links pesquisados, identificando fonte e data de publicação.
 - O nome sugerido é `RELATORIO DE NOTICIAS - <DESASTRE> - <MUNICIPIO> - <AAAA-MM-DD>.docx`.

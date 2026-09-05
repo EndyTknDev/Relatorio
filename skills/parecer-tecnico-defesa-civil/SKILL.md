@@ -94,5 +94,5 @@ Preserve os valores informados pelo usuário e normalize apenas ortografia, pont
 1. Compare o SHA-256 do template antes e depois e confirme que permaneceu idêntico.
 2. Confirme que a saída contém os dados do novo caso e não conserva informações factuais de Acará, exceto elementos que o usuário tenha mandado preservar.
 3. Verifique estruturalmente que não foram adicionados ou removidos parágrafos, tabelas, linhas, células, seções ou imagens.
-4. Renderize todas as páginas e faça inspeção visual quando o ambiente permitir. Se não for possível renderizar, conclua as verificações estruturais disponíveis e informe essa limitação.
+4. Compare visualmente todas as páginas do modelo e da saída, seguindo a seção 6 das regras padrão. Sem renderização e inspeção completas, a saída permanece rascunho e não pode ser entregue como final validado.
 5. Entregue apenas o DOCX final; não coloque arquivos de inspeção em `outputs/`.
