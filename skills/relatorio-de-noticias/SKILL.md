@@ -12,6 +12,7 @@ Use `template/RELATÓRIO DE NOTÍCIAS.docx` como autoridade de estrutura e apar�
 1. Preserve integralmente toda a estrutura e toda a estilização do template durante a cópia, o preenchimento, a substituição de imagens e a verificação. Não acrescente, remova, duplique, reorganize ou reconstrua seções, páginas, parágrafos, tabelas, linhas, células, cabeçalhos, rodapés, quebras, campos, imagens ou espaços reservados. Preserve estilos, fontes, tamanhos, cores, destaques, alinhamentos, recuos, espaçamentos, margens, bordas, paginação, ancoragens, dimensões e posições. Faça somente substituições localizadas nos elementos existentes. Se os dados não couberem na estrutura disponível, peça ao usuário que os ajuste; não altere a estrutura.
 2. Antes de solicitar os dados, verifique se mensagens anteriores da conversa já contêm inputs relacionados a este documento. Se houver, não os reutilize silenciosamente: pergunte se o usuário deseja reaproveitá-los e apresente todos os valores candidatos no formato `Campo: valor`. Aguarde a confirmação e depois solicite apenas os dados ausentes ou substituições desejadas.
 3. Antes de qualquer pesquisa externa, pergunte se o usuário prefere enviar o contexto, os dados e as fontes ou se autoriza o agente a pesquisar as informações. Apresente claramente as duas possibilidades e aguarde a escolha. Se o usuário enviar contexto, não faça pesquisa complementar sem autorização posterior. Se autorizar a pesquisa, siga os critérios de fontes desta skill.
+4. Toda imagem exigida do usuário (cabeçalho, brasão, mapas, fotografias, capturas de tela) só admite duas respostas seguras: um arquivo fornecido para substituir a mídia existente, preservando quadro, dimensões, proporção e ancoragem; ou, quando a skill permitir, confirmação explícita para manter a mídia já presente na cópia. Se o usuário pedir para não usar nenhuma imagem nesse espaço — inclusive quando a skill não permitir manter a mídia do modelo por ela identificar outro município ou órgão —, não exclua o elemento gráfico, o quadro ou a seção para simular um espaço vazio. Explique a limitação, ofereça como única alternativa segura substituir o conteúdo da mídia por uma imagem neutra em branco do mesmo formato e proporção, sem texto, marca ou identidade de terceiros, e só prossiga depois que o usuário confirmar essa alternativa.
 
 ## Antes de começar
 
@@ -25,8 +26,9 @@ Use `template/RELATÓRIO DE NOTÍCIAS.docx` como autoridade de estrutura e apar�
    - desastre;
    - imagem esquerda do cabeçalho;
    - imagem direita do cabeçalho.
-5. Se a finalidade das duas imagens não estiver evidente, peça que o usuário indique qual deve ocupar cada lado. Não use os logotipos de Acará presentes no modelo.
-6. Não substitua uma informação ausente por dados do modelo nem pela data atual. Aguarde os dados obrigatórios antes de iniciar.
+5. Se a finalidade das duas imagens não estiver evidente, peça que o usuário indique qual deve ocupar cada lado. Não use os logotipos de Acará presentes no modelo: eles identificam outro município e não servem como imagem padrão nem como espaço reservado.
+6. Se o usuário pedir para não usar nenhuma imagem em um lado ou nos dois, não trate isso como dado ausente a ignorar nem prossiga sem definir a mídia final. Aplique a regra compartilhada 4: explique que o modelo não comporta um quadro vazio, confirme que a alternativa será uma imagem neutra em branco no(s) lado(s) indicado(s) e só prossiga após a confirmação.
+7. Não substitua uma informação ausente por dados do modelo nem pela data atual. Aguarde os dados obrigatórios antes de iniciar.
 
 ## Pesquisa das notícias
 
@@ -51,7 +53,7 @@ Use `template/RELATÓRIO DE NOTÍCIAS.docx` como autoridade de estrutura e apar�
    - `ESTADO DO <ESTADO>`;
    - `MUNICÍPIO DE <MUNICÍPIO>`;
    - `PREFEITURA MUNICIPAL DE <MUNICÍPIO>`.
-4. Substitua as duas imagens do cabeçalho pelas imagens fornecidas pelo usuário, respeitando a indicação de lado. Preserve os quadros, dimensões, posição, alinhamento e ancoragem existentes. Mantenha a proporção das imagens; quando necessário, use ajuste de contenção com fundo transparente ou branco, sem deformá-las.
+4. Substitua as duas imagens do cabeçalho pelas imagens fornecidas pelo usuário, respeitando a indicação de lado. Preserve os quadros, dimensões, posição, alinhamento e ancoragem existentes. Mantenha a proporção das imagens; quando necessário, use ajuste de contenção com fundo transparente ou branco, sem deformá-las. Se o usuário confirmou, na etapa anterior, que um lado ou os dois ficarão sem imagem, substitua apenas o conteúdo binário da mídia por uma imagem em branco neutra do mesmo formato e proporção — nunca exclua o elemento de desenho, o quadro ou a relação, e nunca reconstrua o cabeçalho.
 5. Preserve o título `RELATÓRIO DE NOTÍCIAS`.
 6. Substitua o subtítulo por `<Desastre> no município de <Município>/<UF>` e o ano pelo ano da data informada. Normalize a sigla da UF a partir do estado confirmado pelo usuário.
 7. Em cada um dos três blocos:
