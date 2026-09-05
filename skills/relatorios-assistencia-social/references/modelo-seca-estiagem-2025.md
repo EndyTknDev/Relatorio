@@ -2,31 +2,31 @@
 
 ## Referência preservada
 
-- Caminho na raiz do plugin: `template/RELATORIO ASSISTÊNCIA SOCIAL SECA E ESTIAGEM 2025.docx`
-- SHA-256: `E2309DFE4169496CA3507200D3B8CD162A5B4FEE44CC6A3C90A7F58E4F7642B9`
-- Tamanho observado: `5.014.511` bytes.
+- Caminho na raiz do plugin: `template/RELATORIO ASSISTÊNCIA SOCIAL SECA E ESTIAGEM 2025.docx`. O nome pode estar armazenado em forma Unicode decomposta ou composta; localize o arquivo pelo hash, não apenas pela grafia.
+- SHA-256: `A45525EFF6A3E6C095A2D55AA5082EB65CD31C7ECED0D4590EC6A25D0FB997BA`
+- Tamanho observado: `62.186` bytes.
 - O modelo é somente leitura. Gere relatórios exclusivamente a partir de uma cópia.
+- Esta é uma nova versão do modelo (o relatório fotográfico do final do documento foi removido pelo responsável pela skill). O hash, o tamanho e toda esta referência foram atualizados a partir dela; se o hash divergir novamente no futuro, trate como mais uma nova versão e repita a inspeção.
 
 ## Estrutura apurada
 
-- 106 parágrafos de nível superior.
-- 14 seções, todas em orientação retrato.
+- 3 seções, todas em orientação retrato: 2 contínuas e 1 com quebra para nova página.
+- 33 parágrafos de nível superior (era 106 antes da remoção do relatório fotográfico).
 - Nenhuma tabela.
 - Nenhum campo automático do Word, nota de rodapé, nota de fim ou controle de conteúdo.
-- 21 imagens no corpo: 10 em linha e 11 flutuantes/ancoradas.
-- Cabeçalhos contêm duas imagens de identidade visual, repetidas em duas partes de cabeçalho.
-- Existem elementos flutuantes também nos rodapés. Preserve suas relações e posições.
-- O documento usa formatação direta de forma extensa: 49 trechos e 94 parágrafos foram sinalizados. Não “limpe” essa formatação durante uma atualização comum.
-- Os títulos principais não usam estilos `Heading`; dois títulos foram identificados como `List Paragraph`. Preserve esse comportamento por fidelidade, salvo pedido explícito de modernização ou acessibilidade.
+- **Nenhuma imagem no corpo do documento.** O relatório fotográfico que existia em páginas próprias ao final foi removido; o modelo agora é somente texto, além da identidade visual do cabeçalho e rodapé.
+- 2 partes de cabeçalho, cada uma com 2 imagens de identidade visual. A seção 1 declara variantes de rodapé `even`, `default` (ímpar) e `first`; a seção 3 declara seu próprio cabeçalho/rodapé (`rId11`/`rId12`). Confirme com o usuário se a distinção entre página par/ímpar/primeira é intencional.
+- O rodapé traz endereço ("Ao lado do Ginásio 'O Dicao'", CEP), e-mail (`semadsacara@gmail.com`) e CNPJ.
+- O arquivo carrega um rótulo de confidencialidade do Microsoft Purview (`docMetadata/LabelInfo.xml`) que imprime o texto "Classified - Confidential" nos rodapés — o mesmo padrão observado em outros templates deste plugin. Esse texto não é conteúdo do relatório; não o trate como campo a preencher nem o remova por conta própria.
+- Estilos em uso: `Normal`, `Body Text` e `List Paragraph` (identificadores internos em inglês nesta versão). Os títulos principais (`– IDENTIFICAÇÃO`, `– RELATÓRIO INFORMATIVO SOCIAL`) usam `List Paragraph`, não estilos `Heading`; preserve esse comportamento por fidelidade.
+- Formatação direta é usada ao longo do documento; não a normalize.
 
 ## Sistema de página
 
 - Tamanho observado: aproximadamente `8,28 × 11,94 pol.`.
-- Margens esquerda e direita: `0,30 pol.` em todas as seções.
-- Margem superior: `1,10 pol.` em todas as seções.
-- Margem inferior: `0,94 pol.` nas seções 1 a 3 e `1,10 pol.` nas seções 4 a 14.
-- A seção 1 começa de forma contínua; a seção 2 começa em nova página; a seção 3 é contínua; as seções 4 a 14 começam em nova página.
-- Cabeçalho e rodapé da seção 1 não são vinculados a uma seção anterior. As seções 2 e 3 herdam os anteriores. A seção 4 inicia outro conjunto não vinculado; as seções 5 a 14 herdam da seção 4.
+- Margens esquerda e direita: `0,30 pol.`.
+- Margem superior: `1,10 pol.`. Margem inferior: `0,94 pol.` na seção 1 e `1,10 pol.` na seção 3.
+- A seção 1 é contínua; a seção 2 é contínua; a seção 3 inicia em nova página com cabeçalho e rodapé próprios.
 
 ## Ordem de conteúdo
 
@@ -37,7 +37,8 @@
 5. Diagnóstico preliminar.
 6. Conclusão, recomendações e providências.
 7. Assinatura ou identificação da unidade responsável.
-8. Relatório fotográfico em seções/páginas próprias.
+
+**Não existe mais relatório fotográfico** ao final do documento (era o item 8 em versões anteriores desta referência). Não peça nem insira fotografias por padrão; se o usuário pedir explicitamente para reintroduzi-las, trate como uma inserção nova a negociar (posição, tamanho, legenda), deixando claro que isso altera a estrutura do modelo atual.
 
 ## Mapa de substituições
 
@@ -46,19 +47,19 @@
 - **Situação Geral:** adaptar ao município e estado informados, mantendo redação, tom e função semelhantes aos do modelo.
 - **Diagnóstico Preliminar:** adaptar ao município e estado informados, mantendo a estrutura argumentativa e técnica do modelo.
 - **Conclusão:** adaptar a síntese e as recomendações ao município e estado informados, mantendo a lógica do modelo.
-- **Demais conteúdos:** preservar. Não alterar interessado, secretaria, assunto, ações, números, valores, assinatura, relatório fotográfico, cabeçalhos, rodapés ou logos sem pedido explícito.
+- **Demais conteúdos:** preservar. Não alterar interessado, secretaria, assunto, ações, números, valores, assinatura, cabeçalhos, rodapés ou logos sem pedido explícito.
 - **Estilização:** preservar integralmente; faça as substituições dentro dos elementos existentes, mantendo suas propriedades de parágrafo e trecho.
 
-## Limitações da inspeção inicial
+## Limitações da inspeção
 
-A inspeção visual não pôde ser concluída porque o conversor DOCX/PDF não estava disponível no ambiente em 30 de agosto de 2026. Por isso, número de páginas, aparência exata, recortes e sobreposições permanecem não verificados. A presença de 17 imagens flutuantes no pacote torna obrigatória uma renderização completa antes de entregar qualquer relatório derivado quando houver um renderizador disponível.
+A inspeção visual não pôde ser concluída porque não havia conversor DOCX/PDF disponível no ambiente. Número exato de páginas e aparência exata permanecem não verificados por renderização; confirme antes de citar um total ao usuário.
 
 ## Gates de fidelidade
 
 - Compare o hash do modelo antes e depois.
-- Preserve as 14 seções e sua geometria, salvo alteração solicitada.
+- Preserve as 3 seções e sua geometria, salvo alteração solicitada.
 - Preserve cabeçalhos, rodapés, imagens institucionais e relações internas não editadas.
-- Verifique o relatório fotográfico página a página para evitar deslocamento de imagens flutuantes.
 - Inspecione a saída inteira e confirme que município, estado e data foram atualizados nas ocorrências pertinentes.
-- Confirme que somente os três blocos textuais autorizados e os campos geográficos/data foram modificados.
+- Confirme que somente os três blocos textuais autorizados foram modificados.
 - Confirme que nenhuma propriedade visual do template foi alterada.
+- Confirme que nenhuma fotografia ou anexo foi adicionado sem pedido explícito do usuário.

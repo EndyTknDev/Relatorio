@@ -18,6 +18,7 @@
 ## Conteúdo e linguagem
 
 - Antes de criar a cópia de trabalho, pergunte município, estado e data do relatório. Os três campos são obrigatórios.
+- Para qualquer um desses três campos que o usuário confirmar que não pode fornecer agora, use o marcador literal `[NECESSÁRIO INFORMAÇÃO]` no lugar do dado, sem inventar nem completar por suposição. Confirme essa substituição com o usuário antes de prosseguir e liste, na entrega, os campos marcados dessa forma.
 - Faça apenas o que o usuário pedir. Para o fluxo padrão deste modelo, limite as mudanças a município, estado, data, Situação Geral, Diagnóstico Preliminar e Conclusão.
 - Use português brasileiro formal, claro, objetivo e institucional.
 - Separe fato observado, estimativa, avaliação técnica, ação executada e recomendação.
@@ -31,7 +32,7 @@
 
 - Inclua somente dados pessoais necessários à finalidade administrativa do relatório.
 - Não exponha documentos pessoais, endereços completos, prontuários ou informações sensíveis sem necessidade e autorização.
-- Não remova, substitua ou reposicione fotografias no fluxo padrão. Faça isso somente se o usuário pedir explicitamente.
+- O modelo não tem mais fotografias por padrão (o relatório fotográfico do final foi removido). Não insira fotografias no fluxo padrão; faça isso somente se o usuário pedir explicitamente e fornecer os arquivos, tratando como inserção nova.
 - Quando houver legenda, identifique local, data e contexto sem expor pessoas vulneráveis desnecessariamente.
 
 ## Fidelidade e qualidade
@@ -39,7 +40,7 @@
 - Preserve integralmente o sistema visual do modelo: fontes, tamanhos, cores, destaques, alinhamentos, espaçamentos, tamanho e orientação de página, margens, cabeçalhos, rodapés, logos, estilos, quebras, seções e posicionamento de imagens.
 - Não normalize estilos antigos, converta títulos, reconstrua o documento ou aplique melhorias visuais. A estilização do template não deve ser modificada.
 - Evite mudanças em partes internas não relacionadas ao conteúdo solicitado.
-- Revise todas as páginas renderizadas, especialmente fotografias flutuantes, quebras de seção, cabeçalhos e rodapés.
+- Revise todas as páginas renderizadas, especialmente as imagens de identidade visual do cabeçalho, as quebras de seção e os rodapés.
 - Confirme que não existem texto cortado, sobreposição, imagens deformadas, páginas vazias indevidas ou conteúdo residual do caso usado como modelo.
 - Se a renderização não estiver disponível, execute auditorias estruturais e informe que a inspeção visual ficou pendente.
 
@@ -50,6 +51,7 @@
 - Município, estado, data e os três blocos autorizados foram adaptados.
 - Nenhuma parte fora do escopo solicitado foi modificada.
 - Números, datas, nomes e bases legais foram conferidos.
-- Fotografias e legendas permaneceram intactas, exceto quando a alteração foi solicitada explicitamente.
+- Nenhuma fotografia ou anexo foi adicionado sem pedido explícito do usuário.
+- Todo campo marcado como `[NECESSÁRIO INFORMAÇÃO]` foi confirmado com o usuário e está listado na entrega.
 - Cabeçalhos, rodapés, logos, seções e paginação foram preservados.
 - A saída não sobrescreveu outro arquivo.

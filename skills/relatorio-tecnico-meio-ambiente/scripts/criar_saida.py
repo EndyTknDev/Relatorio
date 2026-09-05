@@ -32,7 +32,7 @@ MESES = (
 # em formas Unicode diferentes. Por isso o modelo é localizado pelo hash, e o
 # nome abaixo serve apenas para mensagens de erro.
 MODELO_NOME = "RELATÓRIO TÉCNICO MEIO AMBIEMTE 2025 ATUALIZADO.docx"
-MODELO_SHA256 = "CC824F0B892219EA8BE95200C5E08D1C3383B56B0DAFC0CADF29691375A9E4D7"
+MODELO_SHA256 = "97F9981989143E64104323BB6F065960B905F62122DA59EBB3FC8A6075952079"
 
 
 def raiz_plugin() -> Path:
@@ -47,15 +47,21 @@ def sha256(caminho: Path) -> str:
     return resumo.hexdigest().upper()
 
 
-def localizar_modelo(raiz: Path) -> Path | None:
+def localizar_modelo(raiz: Path) -> tuple[Path | None, list[Path]]:
     """Retorna o .docx de template/ cujo conteúdo bate com MODELO_SHA256."""
     pasta = raiz / "template"
+    bloqueados: list[Path] = []
     if not pasta.is_dir():
-        return None
+        return None, bloqueados
     for arquivo in sorted(pasta.glob("*.docx")):
-        if sha256(arquivo) == MODELO_SHA256:
-            return arquivo
-    return None
+        if arquivo.name.startswith("~$"):
+            continue
+        try:
+            if sha256(arquivo) == MODELO_SHA256:
+                return arquivo, bloqueados
+        except PermissionError:
+            bloqueados.append(arquivo)
+    return None, bloqueados
 
 
 def data_documental(valor: str | None) -> date:
@@ -85,8 +91,14 @@ def main() -> int:
     args = analisar_argumentos()
     raiz = raiz_plugin()
 
-    modelo = localizar_modelo(raiz)
+    modelo, bloqueados = localizar_modelo(raiz)
     if modelo is None:
+        if bloqueados:
+            print(
+                "O modelo está aberto ou bloqueado. Feche o arquivo no Word e tente novamente.",
+                file=sys.stderr,
+            )
+            return 5
         print(
             "Modelo não localizado em template/ pelo hash esperado. "
             f"Confirme a presença de '{MODELO_NOME}'. Se o arquivo mudou, "

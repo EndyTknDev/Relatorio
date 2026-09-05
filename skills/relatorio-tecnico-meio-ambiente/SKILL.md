@@ -1,6 +1,6 @@
 ---
 name: relatorio-tecnico-meio-ambiente
-description: Gera relatórios técnicos DOCX da Secretaria Municipal de Meio Ambiente a partir do modelo preservado, adaptando município, UF, tipo do desastre (seca e estiagem, queimadas, enchentes, alagamentos, deslizamentos), ano, data, a caracterização do município, Apresentação, Precipitação e Temperatura, Justificativa, Diagnóstico, Conclusão, o Anexo 1 de localidades afetadas e as Referências, sem alterar a estilização. Use quando o usuário pedir um relatório técnico ambiental baseado nesse template; não use para outros tipos de documento.
+description: Gera relatórios técnicos DOCX da Secretaria Municipal de Meio Ambiente a partir do modelo preservado, adaptando município, UF, tipo do desastre (seca e estiagem, queimadas, enchentes, alagamentos, deslizamentos), ano, data, a caracterização do município, Apresentação, Precipitação e Temperatura, Justificativa, Diagnóstico, Conclusão, as Figuras 1 a 3, o Anexo 1 de localidades afetadas e as Referências, sem alterar a estilização. Use quando o usuário pedir um relatório técnico ambiental baseado nesse template; não use para outros tipos de documento.
 ---
 
 # Relatório Técnico de Meio Ambiente
@@ -18,20 +18,16 @@ Use `template/RELATÓRIO TÉCNICO MEIO AMBIEMTE 2025 ATUALIZADO.docx` como autor
 
 1. Resolva a raiz do plugin dois níveis acima desta skill.
 2. Leia [references/regras-gerais.md](references/regras-gerais.md) para qualquer relatório.
-3. Leia [references/modelo-meio-ambiente-2025.md](references/modelo-meio-ambiente-2025.md) para este modelo.
+3. Leia [references/modelo-meio-ambiente-2025.md](references/modelo-meio-ambiente-2025.md) para este modelo. Esta versão não tem mais anexo fotográfico no final do relatório.
 4. Confirme que o modelo ainda corresponde ao SHA-256 registrado na referência. Se divergir, trate-o como uma nova versão, refaça a inspeção e atualize a referência e o script antes de gerar documentos.
-5. Antes de copiar ou editar o documento, pergunte obrigatoriamente, em um único bloco:
-   - município;
-   - estado/UF;
-   - tipo do desastre ocorrido no município (por exemplo seca e estiagem, queimadas, enchentes, alagamentos, deslizamentos), que determina o enquadramento de todo o relatório;
-   - ano de referência do relatório;
-   - data do documento (por extenso e no formato AAAA-MM-DD);
-   - secretaria responsável e órgão parceiro, apenas se diferentes do modelo (Secretaria Municipal de Meio Ambiente – SEMMA, em parceria com a Defesa Civil Municipal);
-   - responsável pela assinatura e cargo, apenas se devam ser alterados;
-   - imagens de cabeçalho e brasão, ou confirmação para manter as do modelo;
-   - lista de localidades afetadas para o Anexo 1, se houver atualização.
-6. Não deduza esses dados, não use valores do modelo (caso de Acará-PA, 2025, com foco em queimadas e estiagem) e não substitua a data ausente pela data atual. Se qualquer item obrigatório faltar, aguarde a resposta do usuário antes de iniciar a geração.
-7. O modelo trata de queimadas e estiagem. Quando o tipo do desastre informado for outro, adapte o enquadramento do relatório a esse desastre em todas as seções, mantendo a estrutura, a ordem, os estilos e a quantidade de parágrafos, tabelas e seções do modelo. Não acrescente nem remova seções por causa da troca de desastre.
+5. Peça os dados em blocos sucessivos — não solicite tudo de uma vez. Aguarde a resposta de cada bloco antes de abrir o próximo:
+   1. **Identificação e enquadramento** (obrigatório antes de qualquer cópia): município; estado/UF; tipo do desastre ocorrido no município (por exemplo seca e estiagem, queimadas, enchentes, alagamentos, deslizamentos), que determina o enquadramento de todo o relatório; ano de referência; data do documento (por extenso e no formato AAAA-MM-DD).
+   2. **Dados institucionais** (depois do bloco 1, apenas se diferentes do modelo): secretaria responsável e órgão parceiro (o modelo usa Secretaria Municipal de Meio Ambiente – SEMMA, em parceria com a Defesa Civil Municipal); responsável pela assinatura e cargo.
+   3. **Anexo 1 — localidades afetadas** (depois do bloco 2): lista de localidades, como texto ou como planilha (`.xlsx`/`.csv`) anexada.
+   4. **Figuras e identidade visual** (por último, depois dos três blocos acima): arquivo para a Figura 1 (mapa de localização do município), a Figura 2 (gráfico de precipitação e temperatura) e a Figura 3 (mapa de focos ou eventos do desastre informado); imagens institucionais do cabeçalho, ou confirmação para manter as do modelo. Peça as três figuras como entradas obrigatórias — elas são o conteúdo visual do relatório.
+6. Para qualquer informação obrigatória dos blocos 1 a 3 que o usuário confirmar que não pode fornecer agora, substitua o campo correspondente pelo texto literal `[NECESSÁRIO INFORMAÇÃO]`, sem inventar nem completar com suposições. Confirme essa substituição com o usuário antes de prosseguir e, na entrega, liste todos os campos que ficaram marcados dessa forma. Isso não se aplica às Figuras 1 a 3, que são obrigatórias e seguem a regra compartilhada 4 quando o usuário não puder fornecê-las.
+7. Não deduza esses dados, não use valores do modelo (caso de Acará-PA, 2025, com foco em queimadas e estiagem) e não substitua a data ausente pela data atual. Se qualquer item obrigatório do bloco 1 faltar, aguarde a resposta do usuário antes de iniciar a geração.
+8. O modelo trata de queimadas e estiagem. Quando o tipo do desastre informado for outro, adapte o enquadramento do relatório a esse desastre em todas as seções, mantendo a estrutura, a ordem, os estilos e a quantidade de parágrafos, tabelas e seções do modelo. Não acrescente nem remova seções por causa da troca de desastre.
 
 ## Pesquisa de apoio
 
@@ -54,16 +50,17 @@ Use `template/RELATÓRIO TÉCNICO MEIO AMBIEMTE 2025 ATUALIZADO.docx` como autor
    - **Justificativa** — histórico do desastre informado no município; contexto estadual com indicadores e fontes pertinentes; fatores locais que agravam o desastre; chamadas às figuras. Na subseção conceitual (`Estiagem x Seca dos Rios` no modelo), preserve a função de distinguir conceitos correlatos, adaptando-a ao desastre informado quando necessário e mantendo menções geográficas coerentes.
    - **Diagnóstico** — diagnóstico do município no ano e a subseção `Diagnóstico da Situação em <Município> (<ano>):`, mantendo a mesma quantidade e a mesma função dos parágrafos-tópico do modelo (no modelo: Focos Registrados, Ações de Fiscalização, Contexto Estadual, Prognóstico de Risco, Trabalho de Campo), reescritos para o desastre informado.
    - **Conclusão** — síntese dos impactos ecológicos, sociais e econômicos; correlação com os fatores que originam o desastre; vulnerabilidade socioambiental do município; impactos à saúde pública; base legal e planos aplicáveis; fecho com recomendações. Mantenha a quantidade de parágrafos do modelo.
-   - **Anexo 1 — localidades afetadas** — substitua a lista pelas localidades informadas pelo usuário. Preserve as duas tabelas, todas as linhas, as quatro colunas (`Nº | Localidade | Nº | Localidade`) e a numeração sequencial. Se a quantidade de localidades divergir da capacidade das tabelas do modelo, peça ao usuário que ajuste a lista; não acrescente nem remova linhas.
+   - **Anexo 1 — localidades afetadas** — substitua a lista pelas localidades informadas pelo usuário, inclusive quando vier como planilha `.xlsx`/`.csv`. Preserve as duas tabelas e a estrutura de quatro colunas (`Nº | Localidade | Nº | Localidade`); a quantidade de linhas acompanha o tamanho da lista fornecida. Avise o usuário se a mudança de tamanho alterar visivelmente a paginação.
    - **Linha de data e bloco de assinatura** — `<Município>-<UF>, <data por extenso>.`, cargo, `<Município>-<UF>.` e ano. Só altere nome e cargo se o usuário fornecer.
    - **Referências** — atualize a estatística municipal, a URL de previsão do tempo do município, a URL do IBGE Cidades do município e as datas de acesso, conferindo cada endereço em fonte oficial.
-6. Ajuste os títulos e as legendas dos anexos ao tipo do desastre informado. Não altere `Anexo 2` e `Anexo 3` nem qualquer outra seção fotográfica no fluxo padrão; só substitua fotografias se o usuário fornecer os arquivos e autorizar, preservando dimensões, proporção, âncora e posição.
-7. Não altere nenhuma outra parte do documento, inclusive órgão emissor, numeração de figuras, cabeçalhos, rodapés, logos, campo de número de página, seções ou paginação, salvo pedido explícito do usuário.
-8. Não invente fatos novos. Não mude números, valores, quantidades, ações, datas secundárias ou bases legais sem dados e pedido explícitos do usuário.
-9. Preserve integralmente a estilização do template: estilos `Ttulo1`, `Ttulo2`, `Corpodetexto` e `TableParagraph`, fontes, tamanhos, cores, negritos, alinhamentos, espaçamentos, margens, quebras, seções, ancoragens e posições de imagens.
-10. Faça substituições dentro das execuções (`runs`) e células existentes, reproduzindo suas propriedades. Não reconstrua o documento e não substitua `paragraph.text` ou `cell.text` de forma a apagar a formatação interna.
-11. Antes da entrega, confira que apenas as alterações autorizadas foram realizadas e que nenhuma menção a queimadas ou estiagem sobrou quando o desastre informado for outro. Renderize todas as páginas para inspeção visual quando o ambiente permitir; se não permitir, conclua as verificações estruturais disponíveis e informe a limitação.
-12. Confirme que o arquivo original da pasta `template/` permanece byte a byte inalterado.
+6. Substitua as Figuras 1, 2 e 3 do corpo pelas imagens fornecidas pelo usuário no bloco 4 (mapa de localização, gráfico climático e mapa de focos/eventos, respectivamente — ver a tabela de relações em [references/modelo-meio-ambiente-2025.md](references/modelo-meio-ambiente-2025.md)). Troque apenas o conteúdo binário de cada mídia, preservando a relação, o quadro, a posição, a proporção e a ancoragem existentes. Ajuste a legenda ("Figura N. ...") e a linha "Fonte: ..." de cada uma para descrever a imagem e a origem informadas pelo usuário, sem inventar dado algum sobre elas.
+7. Não há mais anexo fotográfico no final do relatório (antigos Anexo 2 e Anexo 3). Não peça nem insira fotografias de anexo por padrão. Se o usuário pedir explicitamente para reintroduzi-las, trate como uma inserção nova a negociar com ele (posição, tamanho, legenda), deixando claro que isso altera a estrutura do modelo atual.
+8. Não altere nenhuma outra parte do documento, inclusive órgão emissor, numeração de figuras, cabeçalhos, rodapés, logos, campo de número de página, seções ou paginação, salvo pedido explícito do usuário. Não mexa no texto do rótulo de confidencialidade do rodapé, se presente.
+9. Não invente fatos novos. Não mude números, valores, quantidades, ações, datas secundárias ou bases legais sem dados e pedido explícitos do usuário.
+10. Preserve integralmente a estilização do template: estilos `Heading 1`, `Heading 2`, `Body Text` e `Table Paragraph`, fontes, tamanhos, cores, negritos, alinhamentos, espaçamentos, margens, quebras, seções, ancoragens e posições de imagens.
+11. Faça substituições dentro das execuções (`runs`) e células existentes, reproduzindo suas propriedades. Não reconstrua o documento e não substitua `paragraph.text` ou `cell.text` de forma a apagar a formatação interna.
+12. Antes da entrega, confira que apenas as alterações autorizadas foram realizadas, que nenhuma menção a queimadas ou estiagem sobrou quando o desastre informado for outro, e que as três Figuras e suas legendas correspondem às imagens fornecidas. Renderize todas as páginas para inspeção visual quando o ambiente permitir; se não permitir, conclua as verificações estruturais disponíveis e informe a limitação.
+13. Confirme que o arquivo original da pasta `template/` permanece byte a byte inalterado.
 
 ## Saída
 

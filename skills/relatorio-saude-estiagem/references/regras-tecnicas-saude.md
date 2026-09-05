@@ -37,20 +37,20 @@ Confirme a data, a vigência e a aplicabilidade de cada protocolo no momento da 
 
 - O orçamento deve identificar período, categorias e condição de estimativa. Não invente preços unitários nem fornecedores.
 - Confira que o total corresponde às parcelas quando elas forem fornecidas.
-- Preserve as tabelas de quatro colunas do modelo. Modifique quantidade de linhas somente após confirmação do usuário.
+- Preserve a estrutura de quatro colunas das tabelas do modelo (`ITEM | DESCRIÇÃO DOS PRODUTOS | UND | QTD`); a quantidade de linhas acompanha a relação fornecida pelo usuário, inclusive quando ela vier em planilha `.xlsx`. Confirme com o usuário quando a diferença de tamanho for grande o bastante para mudar visivelmente a paginação.
 - Unidades, concentrações e apresentações devem ser transcritas da relação aprovada, sem completar abreviações por suposição.
 
 ## Imagens e privacidade
 
-- Use apenas mapa e fotografias fornecidos ou obtidos de fonte verificável e autorizada.
-- Legendas devem identificar o conteúdo, local, data e fonte/autoria somente quando comprovados.
-- Não exponha pacientes, crianças ou pessoas vulneráveis sem necessidade, consentimento e autorização institucional.
+- A versão atual do modelo não tem anexo fotográfico (mapa e fotografias foram removidos). Não peça nem insira mapa ou fotografias por padrão; só o faça mediante pedido explícito do usuário, e nesse caso trate como uma inserção nova a negociar com ele (posição, tamanho, legenda), já que a estrutura não reserva mais esse espaço.
+- Se o usuário pedir para reintroduzir mapa ou fotografias, use apenas material fornecido ou obtido de fonte verificável e autorizada, com legenda identificando conteúdo, local, data e fonte/autoria somente quando comprovados.
+- Não exponha pacientes, crianças ou pessoas vulneráveis sem necessidade, consentimento e autorização institucional, inclusive nas imagens do cabeçalho e nos dados do rodapé.
 - Evite coordenadas exatas de residências e informações que permitam identificar pessoas atendidas.
 
 ## Fidelidade e entrega
 
 - Faça mudanças locais no DOCX e preserve todas as partes não relacionadas ao pedido.
-- Mantenha o número de páginas e a organização dos anexos sempre que o conteúdo couber nos slots existentes.
-- Renderize as 19 páginas e revise cabeçalho, rodapé, tabelas, fotografias, legendas, assinatura e dados de atendimento.
+- Mantenha a organização dos anexos existentes (planilha de atendimento) sempre que o conteúdo couber nos slots existentes; a quantidade de linhas das tabelas de medicamentos e da planilha de atendimento pode variar conforme os dados fornecidos, mas a estrutura de colunas não.
+- O pacote não declara um número de páginas confiável. Renderize e revise todas as páginas geradas, incluindo cabeçalho, rodapé (e suas variantes de página par/ímpar/primeira, se mantidas), tabelas, assinatura e dados de atendimento.
 - Entregue o DOCX e liste separadamente os links das fontes usadas; não insira observações de processo no documento final.
 

@@ -28,8 +28,11 @@ MESES = (
     "Dezembro",
 )
 
+# O nome do arquivo pode chegar ao disco em formas Unicode diferentes
+# (composta ou decomposta). Por isso o modelo é localizado pelo hash, e o
+# nome abaixo serve apenas para mensagens de erro.
 MODELO_NOME = "RELATORIO ASSISTÊNCIA SOCIAL SECA E ESTIAGEM 2025.docx"
-MODELO_SHA256 = "E2309DFE4169496CA3507200D3B8CD162A5B4FEE44CC6A3C90A7F58E4F7642B9"
+MODELO_SHA256 = "A45525EFF6A3E6C095A2D55AA5082EB65CD31C7ECED0D4590EC6A25D0FB997BA"
 
 
 def raiz_plugin() -> Path:
@@ -42,6 +45,23 @@ def sha256(caminho: Path) -> str:
         for bloco in iter(lambda: arquivo.read(1024 * 1024), b""):
             resumo.update(bloco)
     return resumo.hexdigest().upper()
+
+
+def localizar_modelo(raiz: Path) -> tuple[Path | None, list[Path]]:
+    """Retorna o .docx de template/ cujo conteúdo bate com MODELO_SHA256."""
+    pasta = raiz / "template"
+    bloqueados: list[Path] = []
+    if not pasta.is_dir():
+        return None, bloqueados
+    for arquivo in sorted(pasta.glob("*.docx")):
+        if arquivo.name.startswith("~$"):
+            continue
+        try:
+            if sha256(arquivo) == MODELO_SHA256:
+                return arquivo, bloqueados
+        except PermissionError:
+            bloqueados.append(arquivo)
+    return None, bloqueados
 
 
 def data_documental(valor: str | None) -> date:
@@ -70,15 +90,19 @@ def analisar_argumentos() -> argparse.Namespace:
 def main() -> int:
     args = analisar_argumentos()
     raiz = raiz_plugin()
-    modelo = raiz / "template" / MODELO_NOME
-    if not modelo.is_file():
-        print(f"Modelo não encontrado: {modelo}", file=sys.stderr)
-        return 2
 
-    hash_atual = sha256(modelo)
-    if hash_atual != MODELO_SHA256:
+    modelo, bloqueados = localizar_modelo(raiz)
+    if modelo is None:
+        if bloqueados:
+            print(
+                "O modelo está aberto ou bloqueado. Feche o arquivo no Word e tente novamente.",
+                file=sys.stderr,
+            )
+            return 5
         print(
-            "O modelo foi alterado. Faça nova inspeção e atualize as regras antes de gerar saídas.",
+            f"Modelo não localizado em template/ pelo hash esperado. Confirme a presença de "
+            f"'{MODELO_NOME}'. Se o arquivo mudou, refaça a inspeção e atualize a referência "
+            "e o script antes de gerar saídas.",
             file=sys.stderr,
         )
         return 3

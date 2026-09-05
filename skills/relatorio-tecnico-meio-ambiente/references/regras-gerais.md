@@ -17,9 +17,10 @@
 
 ## Conteúdo e linguagem
 
-- Antes de criar a cópia de trabalho, pergunte município, estado/UF, tipo do desastre, ano de referência e data do documento. Os cinco campos são obrigatórios.
+- Peça os dados em blocos sucessivos, não tudo de uma vez: primeiro identificação e enquadramento (município, estado/UF, tipo do desastre, ano de referência, data do documento); depois o conteúdo textual (caracterização do município, situação, diagnóstico, conclusão); depois o Anexo 1 (lista de localidades, aceita também como planilha `.xlsx`/`.csv`); e só por último as Figuras 1–3 e a identidade visual do cabeçalho/rodapé. Os cinco campos de identificação são obrigatórios antes de iniciar qualquer cópia.
 - O tipo do desastre (por exemplo seca e estiagem, queimadas, enchentes, alagamentos, deslizamentos) varia conforme o município e define o enquadramento de todo o relatório. O modelo foi redigido para queimadas e estiagem; quando o desastre for outro, reescreva as menções ao fenômeno, causas, efeitos, indicadores e legendas para esse desastre, sem alterar estrutura, ordem, estilos, título nem a quantidade de parágrafos, tabelas e seções.
-- Faça apenas o que o usuário pedir. Para o fluxo padrão deste modelo, limite as mudanças a município, UF, tipo do desastre, ano, data, caracterização do município na Introdução, Apresentação, Precipitação e Temperatura, Justificativa, Diagnóstico, Conclusão, Anexo 1 (localidades afetadas) e Referências.
+- Para qualquer campo obrigatório que o usuário confirmar que não pode fornecer no momento, use o marcador literal `[NECESSÁRIO INFORMAÇÃO]` no lugar do dado, sem inventar nem completar por suposição. Confirme essa substituição com o usuário antes de prosseguir e liste, na entrega, todos os campos marcados dessa forma.
+- Faça apenas o que o usuário pedir. Para o fluxo padrão deste modelo, limite as mudanças a município, UF, tipo do desastre, ano, data, caracterização do município na Introdução, Apresentação, Precipitação e Temperatura, Justificativa, Diagnóstico, Conclusão, as Figuras 1 a 3, o Anexo 1 (localidades afetadas) e Referências.
 - Use português brasileiro formal, claro, objetivo e institucional.
 - Separe fato observado, estimativa, avaliação técnica, ação executada e recomendação.
 - Preserve a grafia oficial de órgãos, municípios, programas, unidades de conservação e comunidades.
@@ -34,15 +35,15 @@
 
 - Inclua somente dados pessoais necessários à finalidade administrativa do relatório.
 - Não exponha documentos pessoais, endereços completos ou informações sensíveis sem necessidade e autorização.
-- Não remova, substitua ou reposicione fotografias no fluxo padrão. Faça isso somente se o usuário pedir explicitamente e fornecer os arquivos.
+- As Figuras 1 a 3 do corpo (mapa, gráfico e mapa) são as únicas imagens de conteúdo do relatório e devem ser substituídas pelas fornecidas pelo usuário; não invente nem reutilize as do caso de Acará sem autorização. Não há mais anexo fotográfico no final do relatório — não peça nem insira fotografias de anexo por padrão; faça isso somente se o usuário pedir explicitamente e fornecer os arquivos, tratando como inserção nova.
 - Quando houver legenda, identifique local, data e contexto sem expor pessoas vulneráveis desnecessariamente.
 
 ## Fidelidade e qualidade
 
-- Preserve integralmente o sistema visual do modelo: estilos (`Ttulo1`, `Ttulo2`, `Corpodetexto`, `TableParagraph`), fontes, tamanhos, cores, destaques, alinhamentos, espaçamentos, tamanho e orientação de página, margens, cabeçalhos, rodapés, logos, campo de número de página, quebras, seções e posicionamento de imagens.
+- Preserve integralmente o sistema visual do modelo: estilos (`Heading 1`, `Heading 2`, `Body Text`, `Table Paragraph`), fontes, tamanhos, cores, destaques, alinhamentos, espaçamentos, tamanho e orientação de página, margens, cabeçalhos, rodapés, logos, campo de número de página, quebras, seções e posicionamento de imagens.
 - Não normalize estilos, converta títulos, reconstrua o documento ou aplique melhorias visuais. A estilização do template não deve ser modificada.
 - Evite mudanças em partes internas não relacionadas ao conteúdo solicitado.
-- Revise todas as páginas renderizadas, especialmente as imagens flutuantes dos anexos fotográficos, as quebras de seção, os cabeçalhos e os rodapés.
+- Revise todas as páginas renderizadas, especialmente as Figuras 1 a 3 e suas legendas, as quebras de seção, os cabeçalhos e os rodapés.
 - Confirme que não existem texto cortado, sobreposição, imagens deformadas, páginas vazias indevidas ou conteúdo residual do caso de Acará-PA.
 - Se a renderização não estiver disponível, execute auditorias estruturais e informe que a inspeção visual ficou pendente.
 
@@ -54,8 +55,9 @@
 - O enquadramento do relatório corresponde ao desastre informado e não sobrou menção a queimadas ou estiagem quando o desastre for outro.
 - Nenhuma parte fora do escopo solicitado foi modificada.
 - Números, percentuais, coordenadas, população, datas, nomes e bases legais foram conferidos em fonte oficial.
-- As duas tabelas do Anexo 1 mantiveram 4 colunas e a numeração sequencial.
-- Fotografias e legendas dos Anexos 2 e 3 permaneceram intactas, exceto quando a alteração foi solicitada explicitamente.
+- As duas tabelas do Anexo 1 mantiveram as 4 colunas; a quantidade de linhas corresponde à lista fornecida (inclusive quando veio por planilha).
+- As Figuras 1 a 3 foram substituídas pelas imagens fornecidas, com legendas e fontes coerentes; nenhum anexo fotográfico foi adicionado sem pedido explícito.
+- Todo campo marcado como `[NECESSÁRIO INFORMAÇÃO]` foi confirmado com o usuário e está listado na entrega.
 - Cabeçalhos, rodapés, logos, campo de número de página, seções e paginação foram preservados.
 - As Referências foram atualizadas para o município e conferidas.
 - A saída não sobrescreveu outro arquivo.

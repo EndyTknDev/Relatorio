@@ -30,16 +30,15 @@
 
 ## Evidências e privacidade
 
-- Use somente imagens fornecidas pelo usuário ou obtidas de fonte verificável com autorização e condições de uso compatíveis.
-- Não use fotografia de outro município como se fosse evidência local.
-- Não altere o conteúdo de uma evidência para simular dano, data, localização, coordenadas ou intensidade.
-- Toda fotografia substituída deve receber legenda compatível com seu conteúdo. Informe local, data e fonte/autoria apenas quando comprovados.
+- O modelo não tem mais relatório fotográfico por padrão (mapa e as 16 fotografias foram removidos). Não peça nem insira essas evidências no fluxo padrão.
+- Se o usuário pedir explicitamente para reintroduzir mapa e/ou fotografias, trate como uma inserção nova a negociar (posição, tamanho, legenda), usando somente imagens fornecidas pelo usuário ou obtidas de fonte verificável com autorização e condições de uso compatíveis, e deixando claro que isso altera a estrutura do modelo atual.
+- Não use fotografia de outro município como se fosse evidência local. Não altere o conteúdo de uma evidência para simular dano, data, localização, coordenadas ou intensidade.
+- Toda fotografia inserida deve receber legenda compatível com seu conteúdo. Informe local, data e fonte/autoria apenas quando comprovados.
 - Não identifique pessoas vulneráveis, propriedades privadas ou coordenadas sensíveis sem necessidade administrativa e autorização.
-- Não remova, reposicione ou duplique imagens no fluxo padrão.
 
 ## Fidelidade visual
 
-- Preserve fontes, tamanhos, cores, realces amarelos, negritos, sublinhados, alinhamentos, recuos, espaçamentos, margens, tamanho de página, cabeçalhos, rodapés, logos, quebras e seções.
+- Preserve fontes, tamanhos, cores, realces (quando presentes), negritos, sublinhados, alinhamentos, recuos, espaçamentos, margens, tamanho de página, cabeçalhos, rodapés, logos, quebras e seções.
 - Preserve os estilos `Heading 1`, `Body Text` e `Normal` e a formatação direta de cada execução.
 - Edite texto dentro dos `runs` existentes. Não atribua texto ao parágrafo inteiro de modo que elimine sua formatação ou seus desenhos.
 - Ao substituir mídias, mantenha relações, dimensões, proporção, âncora, posição e ordem de empilhamento.
@@ -52,8 +51,8 @@
 - Município, UF, período, ano, data e secretaria consistentes em todo o documento.
 - Justificativa, prejuízos, Diagnóstico e Conclusão adaptados somente com dados autorizados ou verificados.
 - Valores conferidos contra o input do usuário.
-- Identidade institucional, contatos, mapa, fotos, legendas e assinatura correspondem ao município do relatório.
-- Sete comentários internos do modelo removidos da cópia final.
-- Todas as 19 páginas renderizadas e visualmente revisadas.
+- Identidade institucional, contatos e assinatura correspondem ao município do relatório; nenhum mapa ou fotografia foi adicionado sem pedido explícito.
+- Se o pacote contiver comentários internos de autoria (esta versão não contém), remova-os da cópia final sem alterar texto visível apenas para isso.
+- Todas as páginas geradas renderizadas e visualmente revisadas (a versão atual tem 3 seções; confirme o número exato de páginas por renderização).
 - Arquivo final entregue em `.docx` com a aparência do template preservada.
 

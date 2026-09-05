@@ -18,13 +18,14 @@ Use os modelos da pasta `template/` como autoridade de estrutura e aparência. N
 
 1. Resolva a raiz do plugin dois níveis acima desta skill.
 2. Leia [references/regras-gerais.md](references/regras-gerais.md) para qualquer relatório.
-3. Para o modelo `RELATORIO ASSISTÊNCIA SOCIAL SECA E ESTIAGEM 2025.docx`, leia também [references/modelo-seca-estiagem-2025.md](references/modelo-seca-estiagem-2025.md).
+3. Para o modelo `RELATORIO ASSISTÊNCIA SOCIAL SECA E ESTIAGEM 2025.docx`, leia também [references/modelo-seca-estiagem-2025.md](references/modelo-seca-estiagem-2025.md). Esta versão não tem mais relatório fotográfico no final do documento.
 4. Confirme que o modelo ainda corresponde ao hash registrado na referência. Se divergir, trate-o como uma nova versão e faça outra inspeção antes de gerar documentos.
-5. Antes de copiar ou editar o documento, pergunte obrigatoriamente:
+5. Antes de copiar ou editar o documento, pergunte obrigatoriamente, em um único bloco:
    - município;
    - estado;
    - data do relatório.
-6. Não deduza esses três dados, não use valores do modelo e não substitua a data ausente pela data atual. Se qualquer item estiver faltando, aguarde a resposta do usuário antes de iniciar a geração.
+6. Para qualquer um desses três campos que o usuário confirmar que não pode fornecer agora, substitua o dado pelo texto literal `[NECESSÁRIO INFORMAÇÃO]`, sem inventar nem completar por suposição. Confirme essa substituição com o usuário antes de prosseguir e liste, na entrega, os campos marcados dessa forma.
+7. Não deduza esses três dados, não use valores do modelo e não substitua a data ausente pela data atual. Se qualquer item estiver faltando e sem confirmação de placeholder, aguarde a resposta do usuário antes de iniciar a geração.
 
 ## Fluxo de trabalho
 
@@ -38,7 +39,7 @@ Use os modelos da pasta `template/` como autoridade de estrutura e aparência. N
 5. Em `Situação Geral`, contextualize o município e o estado informados usando redação semelhante à do modelo.
 6. Em `Diagnóstico Preliminar`, adapte a redação à localidade informada e mantenha a função técnica da seção conforme o modelo.
 7. Em `Conclusão`, adapte a síntese e as recomendações à localidade informada, mantendo a lógica do modelo.
-8. Não altere nenhuma outra parte do documento, inclusive fotografias, assinatura, assunto, interessado, secretaria, cabeçalhos, rodapés, logos, seções ou paginação, salvo se o usuário pedir explicitamente uma dessas alterações.
+8. Não altere nenhuma outra parte do documento, inclusive assinatura, assunto, interessado, secretaria, cabeçalhos, rodapés, logos, seções ou paginação, salvo se o usuário pedir explicitamente uma dessas alterações. O modelo não tem mais fotografias por padrão; se o usuário pedir para inserir alguma, trate como inserção nova a negociar (posição, tamanho, legenda), deixando claro que isso altera a estrutura do modelo atual.
 9. Não invente fatos novos. Não mude números, valores, quantidades, ações, datas secundárias ou bases legais sem dados e pedido explícitos do usuário.
 10. Preserve integralmente a estilização do template: fontes, tamanhos, cores, negritos, alinhamentos, espaçamentos, margens, quebras, estilos, ancoragens e posições.
 11. Antes da entrega, confira que apenas as alterações autorizadas foram realizadas. Renderize todas as páginas para inspeção visual quando o ambiente permitir; se não permitir, conclua as verificações estruturais disponíveis e informe a limitação.
