@@ -8,6 +8,15 @@ Preserve integralmente toda a estrutura e toda a estilização do template duran
 
 ## 2. Dados presentes na conversa
 
+Primeiro, leia os inputs e anexos enviados pelo usuário junto ao comando inicial da skill. Aproveite diretamente os dados fornecidos explicitamente para o relatório atual, sem pedir que sejam repetidos ou confirmar sua reutilização. Se todos os inputs necessários já estiverem presentes e claros, prossiga com a execução sem perguntar como o usuário prefere informar os dados.
+
+Somente se ainda faltarem inputs, pergunte: `Como você prefere informar os dados restantes?`, com as opções selecionáveis `Aos poucos, em etapas` e `Todos de uma vez`, sempre permitindo uma resposta escrita. Aguarde a escolha antes de solicitar apenas os dados ausentes. Se o usuário já tiver indicado essa preferência para o relatório atual, aplique-a sem perguntar novamente. Esclareça somente as ambiguidades que impeçam a execução.
+
+- `Aos poucos, em etapas`: solicite um pequeno bloco de campos relacionados por vez e aguarde a resposta antes de apresentar o próximo.
+- `Todos de uma vez`: envie em uma única solicitação todos os inputs ainda necessários, organizados por assunto, incluindo exemplos de preenchimento, arquivos necessários e escolhas aplicáveis. Depois, pergunte apenas sobre lacunas, ambiguidades ou campos que dependam das respostas recebidas.
+
+A preferência escolhida prevalece sobre instruções específicas das skills que determinem um único bloco ou blocos sucessivos. Preserve em ambos os modos os campos obrigatórios, as opções selecionáveis e a resposta escrita; não repita dados já fornecidos nem presuma autorizações ainda não concedidas.
+
 Antes de solicitar os dados, verifique se mensagens anteriores da conversa já contêm entradas relacionadas ao documento. Se houver, não as reutilize silenciosamente: pergunte se o usuário deseja reaproveitá-las e apresente todos os valores candidatos no formato `Campo: valor`. Aguarde a confirmação e depois solicite apenas os dados ausentes ou as substituições desejadas.
 
 Sempre que precisar pedir informações, use a interface de seleção disponível e faça perguntas curtas, com duas ou três opções objetivas por vez. Toda pergunta deve permitir uma resposta escrita: mantenha a opção livre `Outra opção — escrever resposta` ou o campo equivalente oferecido pela interface. Para dados naturalmente abertos, como descrição de danos, localidades ou listas de itens, inclua uma opção visível como `Escrever ou colar os dados`.
