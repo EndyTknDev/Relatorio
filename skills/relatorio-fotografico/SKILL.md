@@ -7,6 +7,12 @@ description: Gera relatórios fotográficos em DOCX a partir do modelo oficial, 
 
 Use `template/RELATORIO FOTOGRÁFICO.docx` como autoridade de estrutura e aparência. Nunca edite diretamente qualquer arquivo da pasta `template/`.
 
+## Regras obrigatórias compartilhadas
+
+1. Preserve integralmente toda a estrutura e toda a estilização do template durante a cópia, o preenchimento, a substituição de imagens e a verificação. Não acrescente, remova, duplique, reorganize ou reconstrua seções, páginas, parágrafos, tabelas, linhas, células, cabeçalhos, rodapés, quebras, campos, imagens ou espaços reservados. Preserve estilos, fontes, tamanhos, cores, destaques, alinhamentos, recuos, espaçamentos, margens, bordas, paginação, ancoragens, dimensões e posições. Faça somente substituições localizadas nos elementos existentes. Se os dados não couberem na estrutura disponível, peça ao usuário que os ajuste; não altere a estrutura.
+2. Antes de solicitar os dados, verifique se mensagens anteriores da conversa já contêm inputs relacionados a este documento. Se houver, não os reutilize silenciosamente: pergunte se o usuário deseja reaproveitá-los e apresente todos os valores candidatos no formato `Campo: valor`. Aguarde a confirmação e depois solicite apenas os dados ausentes ou substituições desejadas.
+3. Antes de qualquer pesquisa externa, pergunte se o usuário prefere enviar o contexto, os dados e as fontes ou se autoriza o agente a pesquisar as informações. Apresente claramente as duas possibilidades e aguarde a escolha. Se o usuário enviar contexto, não faça pesquisa complementar sem autorização posterior. Se autorizar a pesquisa, siga os critérios de fontes desta skill.
+
 ## Antes de começar
 
 1. Resolva a raiz do plugin dois níveis acima desta skill.
@@ -21,7 +27,7 @@ Use `template/RELATORIO FOTOGRÁFICO.docx` como autoridade de estrutura e apar�
    - arquivos das fotografias, na ordem em que devem aparecer, até o limite padrão de 28 imagens;
    - opcionalmente, local, data, fonte/autoria e contexto de cada fotografia.
 5. As fotografias são entradas obrigatórias. Não use as fotografias do modelo como conteúdo de uma nova saída.
-6. Se o usuário já tiver fornecido algum dado, não o peça novamente.
+6. Se o usuário já tiver fornecido algum dado na mensagem atual, não o peça novamente. Para dados encontrados em mensagens anteriores, siga a confirmação de reutilização das regras compartilhadas.
 
 ## Legendas automáticas
 
@@ -40,8 +46,8 @@ Use `template/RELATORIO FOTOGRÁFICO.docx` como autoridade de estrutura e apar�
 4. Substitua as imagens do cabeçalho apenas pelos arquivos fornecidos. Preserve posição, proporção, ancoragem e alinhamento.
 5. Insira as fotografias na ordem recebida, substituindo as mídias existentes e mantendo os quadros e a proporção de cada imagem.
 6. Insira uma legenda automática para cada fotografia nos parágrafos de legenda existentes ou nos espaços imediatamente associados, preservando a estilização visual do modelo.
-7. Se houver menos de 28 imagens, não duplique arquivos e não conserve fotos antigas. Antes de remover páginas, compactar o documento ou deixar posições vazias, peça ao usuário qual opção prefere.
-8. Se houver mais de 28 imagens, peça ao usuário que escolha entre um segundo volume e a expansão do padrão antes de modificar a estrutura.
+7. Se houver menos de 28 imagens, não duplique arquivos, não conserve fotos antigas e não remova páginas nem posições. Peça ao usuário as imagens faltantes para preencher os 28 espaços existentes.
+8. Se houver mais de 28 imagens, peça ao usuário que selecione as 28 que integrarão o documento. Não expanda o padrão nem crie um segundo volume nesta execução.
 9. Não gere, retoque ou altere o conteúdo das fotografias sem pedido explícito.
 10. Não altere estilos, fontes, tamanhos, cores, alinhamentos, margens, cabeçalhos, rodapés, quebras ou seções. Faça substituições locais em `runs`, relacionamentos e mídias existentes; não reconstrua o documento e não use substituição integral de `paragraph.text`.
 11. Faça apenas o que foi solicitado. Não acrescente pesquisa, texto técnico, seções ou elementos gráficos não pedidos.
@@ -57,4 +63,3 @@ Use `template/RELATORIO FOTOGRÁFICO.docx` como autoridade de estrutura e apar�
 - O nome sugerido é `RELATORIO FOTOGRAFICO - <TEMA> - <MUNICIPIO> - <AAAA-MM-DD>.docx`.
 - Nunca sobrescreva uma saída existente sem autorização explícita. Use um sufixo de revisão quando necessário.
 - Não deixe PDFs, imagens de inspeção ou outros temporários dentro de `outputs/`.
-

@@ -7,6 +7,12 @@ description: Gera relatórios técnicos DOCX da Secretaria Municipal de Meio Amb
 
 Use `template/RELATÓRIO TÉCNICO MEIO AMBIEMTE 2025 ATUALIZADO.docx` como autoridade de estrutura e aparência. Nunca edite um arquivo da pasta `template/` diretamente.
 
+## Regras obrigatórias compartilhadas
+
+1. Preserve integralmente toda a estrutura e toda a estilização do template durante a cópia, o preenchimento, a substituição de imagens e a verificação. Não acrescente, remova, duplique, reorganize ou reconstrua seções, páginas, parágrafos, tabelas, linhas, células, cabeçalhos, rodapés, quebras, campos, imagens ou espaços reservados. Preserve estilos, fontes, tamanhos, cores, destaques, alinhamentos, recuos, espaçamentos, margens, bordas, paginação, ancoragens, dimensões e posições. Faça somente substituições localizadas nos elementos existentes. Se os dados não couberem na estrutura disponível, peça ao usuário que os ajuste; não altere a estrutura.
+2. Antes de solicitar os dados, verifique se mensagens anteriores da conversa já contêm inputs relacionados a este documento. Se houver, não os reutilize silenciosamente: pergunte se o usuário deseja reaproveitá-los e apresente todos os valores candidatos no formato `Campo: valor`. Aguarde a confirmação e depois solicite apenas os dados ausentes ou substituições desejadas.
+3. Antes de qualquer pesquisa externa, pergunte se o usuário prefere enviar o contexto, os dados e as fontes ou se autoriza o agente a pesquisar as informações. Apresente claramente as duas possibilidades e aguarde a escolha. Se o usuário enviar contexto, não faça pesquisa complementar sem autorização posterior. Se autorizar a pesquisa, siga os critérios de fontes desta skill.
+
 ## Antes de começar
 
 1. Resolva a raiz do plugin dois níveis acima desta skill.
@@ -47,7 +53,7 @@ Use `template/RELATÓRIO TÉCNICO MEIO AMBIEMTE 2025 ATUALIZADO.docx` como autor
    - **Justificativa** — histórico do desastre informado no município; contexto estadual com indicadores e fontes pertinentes; fatores locais que agravam o desastre; chamadas às figuras. Na subseção conceitual (`Estiagem x Seca dos Rios` no modelo), preserve a função de distinguir conceitos correlatos, adaptando-a ao desastre informado quando necessário e mantendo menções geográficas coerentes.
    - **Diagnóstico** — diagnóstico do município no ano e a subseção `Diagnóstico da Situação em <Município> (<ano>):`, mantendo a mesma quantidade e a mesma função dos parágrafos-tópico do modelo (no modelo: Focos Registrados, Ações de Fiscalização, Contexto Estadual, Prognóstico de Risco, Trabalho de Campo), reescritos para o desastre informado.
    - **Conclusão** — síntese dos impactos ecológicos, sociais e econômicos; correlação com os fatores que originam o desastre; vulnerabilidade socioambiental do município; impactos à saúde pública; base legal e planos aplicáveis; fecho com recomendações. Mantenha a quantidade de parágrafos do modelo.
-   - **Anexo 1 — localidades afetadas** — substitua a lista pelas localidades informadas pelo usuário. Preserve as duas tabelas e as quatro colunas (`Nº | Localidade | Nº | Localidade`) e a numeração sequencial. Se a quantidade de localidades divergir da capacidade das tabelas do modelo, peça confirmação antes de acrescentar ou remover linhas.
+   - **Anexo 1 — localidades afetadas** — substitua a lista pelas localidades informadas pelo usuário. Preserve as duas tabelas, todas as linhas, as quatro colunas (`Nº | Localidade | Nº | Localidade`) e a numeração sequencial. Se a quantidade de localidades divergir da capacidade das tabelas do modelo, peça ao usuário que ajuste a lista; não acrescente nem remova linhas.
    - **Linha de data e bloco de assinatura** — `<Município>-<UF>, <data por extenso>.`, cargo, `<Município>-<UF>.` e ano. Só altere nome e cargo se o usuário fornecer.
    - **Referências** — atualize a estatística municipal, a URL de previsão do tempo do município, a URL do IBGE Cidades do município e as datas de acesso, conferindo cada endereço em fonte oficial.
 6. Ajuste os títulos e as legendas dos anexos ao tipo do desastre informado. Não altere `Anexo 2` e `Anexo 3` nem qualquer outra seção fotográfica no fluxo padrão; só substitua fotografias se o usuário fornecer os arquivos e autorizar, preservando dimensões, proporção, âncora e posição.

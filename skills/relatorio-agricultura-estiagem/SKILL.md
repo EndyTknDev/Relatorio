@@ -7,6 +7,12 @@ description: Gera relatórios técnicos de agricultura em DOCX sobre impactos de
 
 Use `template/RELATORIO_AGRICULTURA_ESTIAGEM_-_2025.docx` como autoridade de estrutura e aparência. Nunca edite diretamente qualquer arquivo da pasta `template/`.
 
+## Regras obrigatórias compartilhadas
+
+1. Preserve integralmente toda a estrutura e toda a estilização do template durante a cópia, o preenchimento, a substituição de imagens e a verificação. Não acrescente, remova, duplique, reorganize ou reconstrua seções, páginas, parágrafos, tabelas, linhas, células, cabeçalhos, rodapés, quebras, campos, imagens ou espaços reservados. Preserve estilos, fontes, tamanhos, cores, destaques, alinhamentos, recuos, espaçamentos, margens, bordas, paginação, ancoragens, dimensões e posições. Faça somente substituições localizadas nos elementos existentes. Se os dados não couberem na estrutura disponível, peça ao usuário que os ajuste; não altere a estrutura.
+2. Antes de solicitar os dados, verifique se mensagens anteriores da conversa já contêm inputs relacionados a este documento. Se houver, não os reutilize silenciosamente: pergunte se o usuário deseja reaproveitá-los e apresente todos os valores candidatos no formato `Campo: valor`. Aguarde a confirmação e depois solicite apenas os dados ausentes ou substituições desejadas.
+3. Antes de qualquer pesquisa externa, pergunte se o usuário prefere enviar o contexto, os dados e as fontes ou se autoriza o agente a pesquisar as informações. Apresente claramente as duas possibilidades e aguarde a escolha. Se o usuário enviar contexto, não faça pesquisa complementar sem autorização posterior. Se autorizar a pesquisa, siga os critérios de fontes desta skill.
+
 ## Antes de começar
 
 1. Resolva a raiz do plugin dois níveis acima desta skill.
@@ -49,7 +55,7 @@ Use `template/RELATORIO_AGRICULTURA_ESTIAGEM_-_2025.docx` como autoridade de est
 6. Adapte somente estes blocos textuais, mantendo a função, a ordem, a quantidade de parágrafos físicos e a extensão aproximada do modelo:
    - **Justificativa — caracterização municipal:** localização, regiões, coordenadas, distâncias e acessos; população, densidade, área territorial e indicador socioeconômico; população rural; importância da agricultura familiar; culturas e rebanhos relevantes. Use dados verificados e indique a fonte de forma compacta no próprio texto quando couber.
    - **Justificativa — efeitos observados:** condições de pastagens e lavouras, disponibilidade hídrica, espécies invasoras, incêndios e consequências ambientais e econômicas. Reescreva para o caso local; não reproduza o texto de Acará com simples troca de nomes.
-   - **Prejuízos:** substitua as quatro linhas do modelo pelas categorias, quantidades e valores fornecidos pelo usuário. Não calcule nem complete valores ausentes sem autorização. Preserve quatro parágrafos; se a quantidade de categorias for diferente, peça confirmação antes de alterar a estrutura.
+   - **Prejuízos:** substitua as quatro linhas do modelo pelas categorias, quantidades e valores fornecidos pelo usuário. Não calcule nem complete valores ausentes sem autorização. Preserve os quatro parágrafos; se a quantidade de categorias for diferente, peça ao usuário que ajuste ou agrupe os dados para caber nessa estrutura.
    - **Diagnóstico:** período de baixa precipitação, abrangência territorial, produtores e comunidades afetados, danos a cultivos e criações, disponibilidade e qualidade da água, riscos sanitários e efeitos sobre a renda rural. Sustente fatos locais com dados do usuário ou fontes verificadas.
    - **Conclusão:** sintetize os impactos agrícolas, pecuários, ambientais, sociais e econômicos comprovados e adapte as medidas emergenciais às necessidades relatadas. Separe ações executadas de recomendações.
    - **Data e assinatura:** use `<Município>-<UF>, <data por extenso>.` e substitua nome, cargo e ato de nomeação somente pelos dados fornecidos.
@@ -57,7 +63,7 @@ Use `template/RELATORIO_AGRICULTURA_ESTIAGEM_-_2025.docx` como autoridade de est
 8. No **Relatório Fotográfico**, mantenha a página do mapa e as 16 páginas fotográficas. Substitua cada evidência somente por arquivo fornecido ou por fonte verificável autorizada pelo usuário, preservando o quadro original.
 9. Toda fotografia substituída deve ter legenda. Use `Figura <n> — <descrição objetiva>. Local: <local>. Data: <DD/MM/AAAA>. Fonte: <autoria/órgão>.` quando todos os dados estiverem disponíveis; não invente campos ausentes. O mapa deve identificar título, período e fonte dentro da própria arte ou em sua legenda existente.
 10. Faça a correspondência individual entre imagem e legenda conforme o mapa de slots da referência. Alguns parágrafos contêm a imagem e a legenda no mesmo elemento; preserve o `drawing` ao trocar o texto.
-11. Não acrescente, remova, duplique ou reorganize imagens, páginas ou seções sem pedido explícito. Não deforme imagens; aplique contenção proporcional dentro dos quadros existentes.
+11. Não acrescente, remova, duplique ou reorganize imagens, páginas ou seções. Não deforme imagens; aplique contenção proporcional dentro dos quadros existentes.
 12. Remova da cópia final somente os sete comentários internos de autoria do modelo depois de aplicar as orientações incorporadas nesta skill. Não altere o texto visível apenas para remover comentários.
 13. Não altere estilos, fontes, tamanhos, cores, destaques, alinhamentos, espaçamentos, margens, cabeçalhos, rodapés, quebras ou seções. Faça substituições locais em `runs`, relacionamentos e mídias existentes; não reconstrua o documento e não use substituição integral de `paragraph.text`.
 14. Faça apenas o que foi solicitado. Não “melhore” a identidade visual, não corrija conteúdo não relacionado e não crie novas seções.
@@ -65,7 +71,7 @@ Use `template/RELATORIO_AGRICULTURA_ESTIAGEM_-_2025.docx` como autoridade de est
 ## Verificação e entrega
 
 - Confirme que o modelo original mantém o mesmo SHA-256 antes e depois.
-- Verifique que a saída conserva 294 parágrafos no corpo, 19 seções, nenhuma tabela, três imagens institucionais no cabeçalho e 17 evidências no corpo (um mapa e 16 fotografias), salvo alteração estrutural autorizada.
+- Verifique que a saída conserva 294 parágrafos no corpo, 19 seções, nenhuma tabela, três imagens institucionais no cabeçalho e 17 evidências no corpo (um mapa e 16 fotografias).
 - Confirme que os blocos amarelos da primeira página, os cabeçalhos, os rodapés, as quebras de página e o bloco de assinatura permanecem visualmente equivalentes ao modelo.
 - Confirme que município, UF, período, ano, data, secretaria, dados locais, prejuízos e assinatura foram atualizados em todas as ocorrências pertinentes e que nenhum dado residual de Acará-PA permaneceu indevidamente.
 - Confira valores e totais contra o input do usuário. Não apresente estimativas como fatos confirmados.
@@ -75,4 +81,3 @@ Use `template/RELATORIO_AGRICULTURA_ESTIAGEM_-_2025.docx` como autoridade de est
 - O nome sugerido é `RELATORIO AGRICULTURA - ESTIAGEM - <MUNICIPIO> - <AAAA-MM-DD>.docx`.
 - Nunca sobrescreva uma saída existente sem autorização explícita. Use um sufixo de revisão quando necessário.
 - Não deixe PDFs, imagens de inspeção ou outros temporários dentro de `outputs/`.
-

@@ -7,6 +7,12 @@ description: Gera relatórios de notícias em DOCX a partir do modelo preservado
 
 Use `template/RELATÓRIO DE NOTÍCIAS.docx` como autoridade de estrutura e aparência. Nunca edite diretamente qualquer arquivo da pasta `template/`.
 
+## Regras obrigatórias compartilhadas
+
+1. Preserve integralmente toda a estrutura e toda a estilização do template durante a cópia, o preenchimento, a substituição de imagens e a verificação. Não acrescente, remova, duplique, reorganize ou reconstrua seções, páginas, parágrafos, tabelas, linhas, células, cabeçalhos, rodapés, quebras, campos, imagens ou espaços reservados. Preserve estilos, fontes, tamanhos, cores, destaques, alinhamentos, recuos, espaçamentos, margens, bordas, paginação, ancoragens, dimensões e posições. Faça somente substituições localizadas nos elementos existentes. Se os dados não couberem na estrutura disponível, peça ao usuário que os ajuste; não altere a estrutura.
+2. Antes de solicitar os dados, verifique se mensagens anteriores da conversa já contêm inputs relacionados a este documento. Se houver, não os reutilize silenciosamente: pergunte se o usuário deseja reaproveitá-los e apresente todos os valores candidatos no formato `Campo: valor`. Aguarde a confirmação e depois solicite apenas os dados ausentes ou substituições desejadas.
+3. Antes de qualquer pesquisa externa, pergunte se o usuário prefere enviar o contexto, os dados e as fontes ou se autoriza o agente a pesquisar as informações. Apresente claramente as duas possibilidades e aguarde a escolha. Se o usuário enviar contexto, não faça pesquisa complementar sem autorização posterior. Se autorizar a pesquisa, siga os critérios de fontes desta skill.
+
 ## Antes de começar
 
 1. Resolva a raiz do plugin dois níveis acima desta skill.
@@ -55,7 +61,7 @@ Use `template/RELATÓRIO DE NOTÍCIAS.docx` como autoridade de estrutura e apar�
    - preserve o tamanho, a posição, a proporção e a ancoragem do quadro de imagem;
    - preencha o primeiro parágrafo vazio imediatamente após a captura com a legenda `Figura <n> — <Título da matéria>. Fonte: <Veículo>, <DD/MM/AAAA>.`, numerando de 1 a 3;
    - use o título, o veículo e a data confirmados na página, sem inventar nem completar dados ausentes.
-8. Não acrescente resumos, novas notícias, parágrafos, páginas ou seções, salvo pedido explícito. Use somente os três parágrafos vazios já existentes após as capturas para as legendas e preserve a formatação desses parágrafos. Não adicione legenda às imagens do cabeçalho.
+8. Não acrescente resumos, novas notícias, parágrafos, páginas ou seções. Use somente os três parágrafos vazios já existentes após as capturas para as legendas e preserve a formatação desses parágrafos. Não adicione legenda às imagens do cabeçalho.
 9. Não altere estilos, fontes, tamanhos, cores, alinhamentos, espaçamentos, margens, cabeçalhos, rodapés ou quebras. Faça substituições locais em `runs`, relacionamentos e mídias existentes; não reconstrua o documento.
 10. Não deixe conteúdo de exemplo do modelo, inclusive Acará, Pará, 2025, os três links originais ou suas capturas.
 

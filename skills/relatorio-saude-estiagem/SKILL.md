@@ -7,6 +7,12 @@ description: Gera relatórios técnicos e planos municipais de resposta em saúd
 
 Use `template/RELATORIO DA SAÚDE ESTIAGEM.docx` como autoridade de estrutura e aparência. Nunca edite diretamente qualquer arquivo da pasta `template/`.
 
+## Regras obrigatórias compartilhadas
+
+1. Preserve integralmente toda a estrutura e toda a estilização do template durante a cópia, o preenchimento, a substituição de imagens e a verificação. Não acrescente, remova, duplique, reorganize ou reconstrua seções, páginas, parágrafos, tabelas, linhas, células, cabeçalhos, rodapés, quebras, campos, imagens ou espaços reservados. Preserve estilos, fontes, tamanhos, cores, destaques, alinhamentos, recuos, espaçamentos, margens, bordas, paginação, ancoragens, dimensões e posições. Faça somente substituições localizadas nos elementos existentes. Se os dados não couberem na estrutura disponível, peça ao usuário que os ajuste; não altere a estrutura.
+2. Antes de solicitar os dados, verifique se mensagens anteriores da conversa já contêm inputs relacionados a este documento. Se houver, não os reutilize silenciosamente: pergunte se o usuário deseja reaproveitá-los e apresente todos os valores candidatos no formato `Campo: valor`. Aguarde a confirmação e depois solicite apenas os dados ausentes ou substituições desejadas.
+3. Antes de qualquer pesquisa externa, pergunte se o usuário prefere enviar o contexto, os dados e as fontes ou se autoriza o agente a pesquisar as informações. Apresente claramente as duas possibilidades e aguarde a escolha. Se o usuário enviar contexto, não faça pesquisa complementar sem autorização posterior. Se autorizar a pesquisa, siga os critérios de fontes desta skill.
+
 ## Preparação obrigatória
 
 1. Resolva a raiz do plugin dois níveis acima desta skill.
@@ -52,7 +58,7 @@ Use `template/RELATORIO DA SAÚDE ESTIAGEM.docx` como autoridade de estrutura e 
    - **Capacidade de resposta e recursos necessários:** adapte as seis ações existentes sem criar compromissos não autorizados.
    - **Orçamento estimado:** use somente o total e as categorias fornecidos; confira a consistência entre total, itens e quantidades.
    - **Conclusão:** sintetize vulnerabilidades, resposta integrada e continuidade do cuidado, sem alegações clínicas ou operacionais não comprovadas.
-6. Atualize as tabelas 0 a 6 somente com relações de medicamentos, soluções e materiais formalmente fornecidas ou confirmadas pela gestão de saúde/farmácia. Preserve as quatro colunas `ITEM | DESCRIÇÃO DOS PRODUTOS | UND | QTD`. Se a quantidade de itens exigir acrescentar ou remover linhas, peça confirmação antes de alterar a estrutura.
+6. Atualize as tabelas 0 a 6 somente com relações de medicamentos, soluções e materiais formalmente fornecidas ou confirmadas pela gestão de saúde/farmácia. Preserve as quatro colunas `ITEM | DESCRIÇÃO DOS PRODUTOS | UND | QTD` e todas as linhas existentes. Se a quantidade de itens não couber, peça ao usuário que ajuste ou agrupe a relação; não altere a estrutura.
 7. Não trate as listas de Acará como seleção clínica padrão. Não calcule consumo, dosagem, estoque ou quantidade com base apenas em população ou em pesquisa genérica.
 8. No anexo fotográfico, mantenha um mapa e três fotografias nos quatro slots existentes. Substitua somente por evidências do município informado ou por fonte verificável autorizada.
 9. Para as três fotografias, use os parágrafos vazios de quebra de seção indicados na referência e acrescente a legenda `Figura <n> — <descrição objetiva>. Local: <local>. Data: <DD/MM/AAAA>. Fonte: <autoria/órgão>.` Não invente campos ausentes. O mapa deve conter título, período e fonte na própria arte ou em legenda compatível.
@@ -65,7 +71,7 @@ Use `template/RELATORIO DA SAÚDE ESTIAGEM.docx` como autoridade de estrutura e 
 ## Verificação e entrega
 
 - Confirme que o template original permanece com o mesmo SHA-256.
-- Preserve 19 páginas, 21 seções, 172 parágrafos de nível superior, 8 tabelas, 3 imagens no cabeçalho e 4 imagens no corpo, salvo mudança estrutural expressamente autorizada.
+- Preserve 19 páginas, 21 seções, 172 parágrafos de nível superior, 8 tabelas, 3 imagens no cabeçalho e 4 imagens no corpo.
 - Confirme que as tabelas 0–6 correspondem às listas aprovadas e que a tabela 7 corresponde aos dados agregados fornecidos.
 - Verifique que não há dados residuais de Acará-PA, inclusive imagens, CNES, unidades, meses, contatos, orçamento ou capacidades hospitalares.
 - Confirme que toda alegação epidemiológica informa período e fonte e que risco potencial não aparece como caso confirmado.
@@ -75,4 +81,3 @@ Use `template/RELATORIO DA SAÚDE ESTIAGEM.docx` como autoridade de estrutura e 
 - Nome sugerido: `RELATORIO SAUDE - ESTIAGEM - <MUNICIPIO> - <AAAA-MM-DD>.docx`.
 - Nunca sobrescreva uma saída existente sem autorização explícita. Use sufixo de revisão quando necessário.
 - Não deixe PDFs ou imagens de verificação dentro de `outputs/`.
-
