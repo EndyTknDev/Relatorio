@@ -78,7 +78,7 @@ Preserve os valores informados pelo usuário e normalize apenas ortografia, pont
 3. Adapte somente o conteúdo necessário ao caso: Causa e Recorrência, áreas afetadas, Efeitos do Desastre, Ações Realizadas, conclusão e campos variáveis autorizados.
 4. Siga a distribuição de conteúdo registrada na referência. Mantenha exatamente a quantidade de parágrafos, tabelas, linhas, células, seções e quebras do template. Quando várias responsabilidades precisarem caber em um único parágrafo físico existente, combine-as sem criar outro parágrafo.
 5. Preserve o texto de assinatura do modelo, a menos que o usuário forneça substituição e peça sua alteração.
-6. Substitua imagens de cabeçalho somente quando o usuário fornecer os arquivos e autorizar a troca. Preserve dimensões, posição, proporção e ancoragem. Caso contrário, mantenha as imagens originais.
+6. Substitua imagens de cabeçalho somente quando o usuário fornecer os arquivos e autorizar a troca. Preserve dimensões, posição, proporção e ancoragem. Caso contrário, mantenha as imagens originais. Independentemente do envio de imagens, preserve sempre o texto, as caixas de texto e a formatação do cabeçalho; a ausência de arquivos de imagem nunca autoriza apagar, esvaziar ou ocultar o texto institucional.
 7. Faça alterações localizadas, preservando propriedades de parágrafo e de execução. Não reconstrua o documento e não substitua `paragraph.text` ou `cell.text` de modo a apagar a formatação interna.
 
 ## Limites obrigatórios

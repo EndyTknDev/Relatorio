@@ -33,6 +33,8 @@ Antes de qualquer pesquisa externa, pergunte se o usuário prefere enviar o cont
 
 Valide esta descrição no pacote real antes de copiar: inventarie mídias, relações de imagem e desenhos no corpo, cabeçalhos e rodapés. Se houver imagens apesar da declaração de ausência, ou faltar a referência de posições exigida abaixo, interrompa a edição das imagens e informe a inconsistência. Não remova, substitua por branco nem reconstrua o cabeçalho para contornar o problema. Não presuma que o slot é opcional. Preserve o original e resolva a versão do modelo ou a autorização específica para a alteração.
 
+**O texto do cabeçalho é independente das imagens e deve ser sempre preservado.** Se o usuário não enviar ou não autorizar imagens de cabeçalho, mantenha integralmente os textos, caixas de texto, campos e respectivas formatações do cabeçalho. A ausência de brasão, logomarca ou fotografia nunca autoriza apagar, esvaziar, ocultar ou substituir o texto institucional. Altere esse texto somente quando houver dados confirmados para o novo caso e a própria skill autorizar seu preenchimento; nesse caso, substitua apenas os valores variáveis e preserve os rótulos, a estrutura e a formatação.
+
 Os templates não contêm imagens para manter ou substituir. Quando uma saída exigir cabeçalho, brasão, mapa, fotografia, captura de tela ou outra imagem, leia `references/especificacoes-imagens-removidas.md` da skill. Recrie somente os slots necessários conforme a tabela: parte e parágrafo, tipo (`inline`, `anchor` ou VML), tamanho do quadro, posição horizontal e vertical e ajuste do texto. Não tente deduzir esses parâmetros pela aparência de um novo arquivo.
 
 Use apenas imagem fornecida pelo usuário ou obtida de fonte verificável com autorização. Nunca restaure a mídia removida, use identidade de outro município ou trate fotografia de outro local como evidência. Se uma imagem obrigatória não for fornecida, pare e solicite o arquivo; não invente, não gere imagem neutra e não use retângulo branco para simular preenchimento. Se o slot for opcional e o usuário não quiser imagem, deixe-o vazio sem remover seu parágrafo, quebra, seção ou propriedades.
@@ -77,6 +79,7 @@ Estas regras se aplicam a todas as sete skills e aos respectivos scripts de gera
 - Use `scripts/fidelidade_docx.py` como biblioteca para substituições simples com `substituir_em_trecho`. Ela recusa substituições que atravessam trechos; para conteúdo misto, mapeie explicitamente cada trecho e valide-o. Não contorne a recusa colapsando o parágrafo.
 - Ajuste a redação ao espaço do campo, preservando fatos e valores. Não acrescente informações extensas em células curtas. Não reduza fonte nem altere dimensões de tabelas para fazê-las caber. Se não for possível acomodar o conteúdo autorizado, explique o conflito específico.
 - Não remova cabeçalhos, desenhos, marcas ou assinaturas automaticamente. Alterações autorizadas nesses elementos precisam ser registradas e verificadas separadamente.
+- A falta de arquivos de imagem não altera a obrigação de conservar o texto do cabeçalho; valide após a edição que nenhum texto institucional foi removido ou esvaziado por depender de um slot de imagem vazio.
 
 ### Depois da edição e antes de entregar
 
