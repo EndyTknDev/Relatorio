@@ -14,14 +14,9 @@ O nome contém acento Unicode e pode ser normalizado de formas diferentes pelo s
 - 136 parágrafos no corpo, nenhuma tabela e três seções.
 - Dois logotipos no cabeçalho.
 - Capa com identificação do estado, município e prefeitura; título `RELATÓRIO FOTOGRÁFICO`; subtítulo do desastre/tema, município/UF e ano.
-- 28 fotografias no corpo: duas por página nas páginas 2 a 14 e uma por página nas páginas 15 e 16.
 - Estilos utilizados: `Heading 1`, `Normal` e `Body Text`.
 
 ## Ordem dos slots fotográficos
-
-As mídias do corpo aparecem, nesta ordem, como `image3.jpg` a `image27.jpg`, seguidas por `image28.jpeg`, `image29.jpeg` e `image30.jpeg`. São 28 posições no total.
-
-Na indexação interna iniciada em zero, os parágrafos que contêm as imagens são: 10, 12, 17, 20, 30, 33, 37, 39, 45, 47, 55, 57, 66, 69, 74, 76, 85, 88, 91, 93, 102, 104, 113, 115, 120, 122, 126 e 135.
 
 Use a ordem recebida como a ordem das figuras. Não reorganize com base no conteúdo visual sem autorização do usuário.
 
@@ -49,7 +44,6 @@ O exemplo mostra apenas a forma. Nunca reaproveite seus dados em uma saída real
 
 ## Controle de capacidade
 
-- Capacidade padrão: 28 fotografias.
 - Quantidade inferior: pedir a escolha entre manter posições vazias, compactar ou remover páginas antes de alterar a estrutura.
 - Quantidade superior: pedir a escolha entre segundo volume ou expansão do padrão.
 - Nunca preencher espaços duplicando fotografias ou mantendo imagens do modelo.
