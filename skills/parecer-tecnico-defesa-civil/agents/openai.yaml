@@ -1,4 +1,4 @@
 interface:
-  display_name: "Parecer Técnico da Defesa Civil"
-  short_description: "Gera pareceres oficiais conforme o modelo"
-  default_prompt: "Use $parecer-tecnico-defesa-civil para gerar um parecer técnico conforme o modelo oficial."
+  display_name: "Documentação — Defesa Civil"
+  short_description: "Documenta arquivos técnicos da Defesa Civil"
+  default_prompt: "Use $parecer-tecnico-defesa-civil para documentar os arquivos fornecidos."

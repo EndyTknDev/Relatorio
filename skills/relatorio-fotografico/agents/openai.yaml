@@ -1,5 +1,4 @@
 interface:
-  display_name: "Relatório Fotográfico"
-  short_description: "Monta relatório fotográfico com legendas automáticas"
-  default_prompt: "Use $relatorio-fotografico para criar um relatório no modelo oficial, inserir as imagens fornecidas e gerar automaticamente uma legenda objetiva para cada fotografia."
-
+  display_name: "Documentação — Imagens"
+  short_description: "Documenta arquivos de registros fotográficos"
+  default_prompt: "Use $relatorio-fotografico para documentar os arquivos fornecidos."

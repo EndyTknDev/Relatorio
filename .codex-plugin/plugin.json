@@ -1,22 +1,22 @@
 {
   "name": "relatorio-plugin",
   "version": "0.1.0",
-  "description": "Cria relatórios de assistência social, pareceres técnicos da Defesa Civil e relatórios técnicos de meio ambiente preservando os modelos oficiais.",
+  "description": "Documenta arquivos com modelos e padrões consistentes.",
   "author": {
-    "name": "Local developer"
+    "name": "dev"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "Relatórios de Assistência Social",
-    "shortDescription": "Relatórios oficiais a partir de modelos padronizados.",
-    "longDescription": "Cria, revisa e organiza relatórios de assistência social usando modelos oficiais sem alterar os arquivos originais.",
-    "developerName": "Local developer",
+    "displayName": "Documentação de Arquivos",
+    "shortDescription": "Documentação padronizada de arquivos.",
+    "longDescription": "Apoia a documentação de arquivos com modelos e padrões consistentes.",
+    "developerName": "dev",
     "category": "Productivity",
-    "capabilities": ["Document generation", "Document review"],
+    "capabilities": ["File documentation"],
     "defaultPrompt": [
-      "Crie um relatório de assistência social usando o modelo oficial.",
-      "Revise este relatório conforme as regras do modelo.",
-      "Organize o relatório na pasta de saída do mês e ano corretos."
+      "Documente estes arquivos usando o padrão disponível.",
+      "Organize a documentação conforme o modelo correspondente.",
+      "Revise a documentação dos arquivos fornecidos."
     ]
   }
 }

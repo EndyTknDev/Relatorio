@@ -1,4 +1,4 @@
 interface:
-  display_name: "Relatórios de Assistência Social"
-  short_description: "Cria relatórios oficiais a partir do modelo"
-  default_prompt: "Use $relatorios-assistencia-social para criar um relatório seguindo o modelo oficial."
+  display_name: "Documentação — Assistência Social"
+  short_description: "Documenta arquivos da assistência social"
+  default_prompt: "Use $relatorios-assistencia-social para documentar os arquivos fornecidos."

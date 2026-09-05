@@ -1,5 +1,4 @@
 interface:
-  display_name: "Relatório de Agricultura — Estiagem"
-  short_description: "Gera relatório agrícola de estiagem no modelo oficial"
-  default_prompt: "Use $relatorio-agricultura-estiagem para gerar um relatório técnico de agricultura sobre estiagem seguindo o modelo oficial."
-
+  display_name: "Documentação — Agricultura"
+  short_description: "Documenta arquivos técnicos da agricultura"
+  default_prompt: "Use $relatorio-agricultura-estiagem para documentar os arquivos fornecidos."
