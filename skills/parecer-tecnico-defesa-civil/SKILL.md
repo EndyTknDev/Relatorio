@@ -16,16 +16,12 @@ Antes de qualquer ação, leia e aplique integralmente [as regras padrão do plu
 1. Resolva a raiz do plugin dois níveis acima desta pasta.
 2. Leia [references/modelo-parecer-tecnico.md](references/modelo-parecer-tecnico.md).
 3. Confirme o SHA-256 do template. Se ele não corresponder ao valor registrado na referência, pare e faça nova inspeção antes de gerar qualquer saída.
-4. Pergunte ao usuário, em um único bloco, os seguintes dados:
-   - município e estado/UF;
-   - secretaria responsável;
-   - assunto;
-   - tipo do desastre;
-   - número e data do decreto;
-   - código COBRADE;
-   - imagens de cabeçalho, ou confirmação para manter as imagens do modelo;
-   - data e hora do documento;
-   - outras informações pertinentes, inclusive responsável pela assinatura, cargo e portaria, somente se devam ser alterados.
+4. Solicite os dados em blocos curtos e sucessivos, seguindo as opções selecionáveis das regras padrão. Aguarde a resposta de cada bloco antes de apresentar o seguinte:
+   1. **Identificação:** município e estado/UF; secretaria responsável; assunto.
+   2. **Tipo do desastre:** ofereça primeiro `Estiagem ou seca`, `Inundação, enchente ou alagamento` e `Incêndio florestal ou queimada`, sempre com a opção livre para escrever. Mencione no enunciado que também são recorrentes ou relevantes no Amazonas/Manaus e no Pará: chuvas intensas, enxurradas, erosão de margem fluvial (`terras caídas`), deslizamento ou movimento de massa, vendaval e baixa umidade. Se o usuário escolher a opção livre, aceite qualquer tipologia e confirme a redação antes de continuar.
+   3. **Decreto e enquadramento:** número e data do decreto; código COBRADE.
+   4. **Data do documento:** calcule as opções no fuso `America/Manaus` e ofereça `Hoje — <DD/MM/AAAA>`, `Ontem — <DD/MM/AAAA>` e `Último dia útil — <DD/MM/AAAA>`, além da opção livre para outra data e hora. Nunca grave literalmente `Hoje`, `Ontem` ou `Último dia útil` no documento; use a data absoluta selecionada pelo usuário.
+   5. **Identidade institucional:** imagens de cabeçalho ou a alternativa permitida pelas regras padrão; responsável pela assinatura, cargo e portaria, somente se devam ser alterados.
 5. Não copie nem edite o documento enquanto os dados obrigatórios estiverem faltando. Não reutilize como fatos os dados do caso de Acará presentes no template.
 
 ## Publicação e dados técnicos
@@ -39,10 +35,34 @@ Antes de qualquer ação, leia e aplique integralmente [as regras padrão do plu
    - comunidades e áreas afetadas, com distâncias ou quilometragens verificáveis;
    - pessoas e famílias afetadas, perfil socioeconômico e grupos vulneráveis;
    - danos humanos, materiais, econômicos, ambientais e sanitários;
-   - lista de danos materiais e respectivos custos estimados;
+   - prejuízos e aquisições, com descrição, quantidade ou extensão quando aplicável e valor individual, usando obrigatoriamente o formato definido na seção seguinte;
    - ações realizadas, equipes e instituições mobilizadas;
    - recursos materiais empregados, valores já gastos e apoio ainda necessário.
 4. Não use números, custos, datas, localidades, ações ou consequências do template para preencher lacunas.
+
+## Formato obrigatório de prejuízos e aquisições
+
+Sempre peça os prejuízos e as aquisições em um bloco próprio. Ofereça as opções selecionáveis `Escrever ou colar a lista`, `Informar item por item` e `Não se aplica ao caso`, além da opção livre para escrever. Solicite uma ocorrência por linha, iniciada por hífen, com descrição objetiva e valor em reais.
+
+Use estes padrões:
+
+- Prejuízo: `-Prejuízos com <descrição, quantidade ou extensão> - R$ <valor>;`
+- Aquisição: `-Aquisição de <quantidade, unidade e item> R$ <valor>.`
+
+Durante a solicitação, apresente sempre o exemplo abaixo como orientação exclusivamente de formato. Deixe claro que os dados são ilustrativos e não podem ser reutilizados no parecer real:
+
+```text
+-Prejuízos com perda de produção agrícola familiar em 1.100 hectares produtivos já destruídos - R$ 2.550.000,00;
+-Prejuízos ambientais - R$ 550.000,00;
+-Prejuízos na criação de animais - R$ 680.000,00;
+-Prejuízo com falta de água potável - R$ 1.250.000,00.
+-Aquisição de 20.000 litros de gasolina R$ 170.000,00.
+-Aquisição de 15.000 litros de diesel R$ 120.000,00.
+-Aquisição de água mineral R$ 3.500.000,00.
+-Aquisição de cestas de alimentos R$ 5.000.000,00.
+```
+
+Preserve os valores informados pelo usuário e normalize apenas ortografia, pontuação e apresentação monetária. Se uma linha não trouxer valor, unidade ou quantidade necessária, peça confirmação em vez de calcular, estimar ou completar o dado. Não trate o exemplo como fonte factual nem some os valores sem solicitação.
 
 ## Pesquisa de apoio
 

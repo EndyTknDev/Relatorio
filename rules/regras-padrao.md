@@ -10,6 +10,10 @@ Preserve integralmente toda a estrutura e toda a estilização do template duran
 
 Antes de solicitar os dados, verifique se mensagens anteriores da conversa já contêm entradas relacionadas ao documento. Se houver, não as reutilize silenciosamente: pergunte se o usuário deseja reaproveitá-las e apresente todos os valores candidatos no formato `Campo: valor`. Aguarde a confirmação e depois solicite apenas os dados ausentes ou as substituições desejadas.
 
+Sempre que precisar pedir informações, use a interface de seleção disponível e faça perguntas curtas, com duas ou três opções objetivas por vez. Toda pergunta deve permitir uma resposta escrita: mantenha a opção livre `Outra opção — escrever resposta` ou o campo equivalente oferecido pela interface. Para dados naturalmente abertos, como descrição de danos, localidades ou listas de itens, inclua uma opção visível como `Escrever ou colar os dados`.
+
+Se não houver interface de seleção, apresente as alternativas como lista numerada e encerre com `Outra opção — escreva sua resposta`. Não transforme uma ausência de dados em autorização para inventar informações. Quando houver muitas alternativas, mostre primeiro as três mais prováveis e mencione no enunciado as demais possibilidades relevantes, que poderão ser informadas pela opção escrita.
+
 ## 3. Autorização para pesquisa externa
 
 Antes de qualquer pesquisa externa, pergunte se o usuário prefere enviar o contexto, os dados e as fontes ou se autoriza o agente a pesquisar as informações. Apresente claramente as duas possibilidades e aguarde a escolha. Se o usuário enviar o contexto, não faça pesquisa complementar sem autorização posterior. Se autorizar a pesquisa, siga os critérios de fontes da skill utilizada.
