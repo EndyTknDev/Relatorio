@@ -1,0 +1,4 @@
+interface:
+  display_name: "Relatório de Notícias"
+  short_description: "Gera relatório com links, capturas e legendas"
+  default_prompt: "Use $relatorio-de-noticias para pesquisar notícias e gerar o relatório com links, capturas e legendas no modelo oficial."

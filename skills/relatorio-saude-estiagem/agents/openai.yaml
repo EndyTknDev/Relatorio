@@ -1,0 +1,5 @@
+interface:
+  display_name: "Relatório de Saúde — Estiagem"
+  short_description: "Gera plano municipal de saúde para estiagem"
+  default_prompt: "Use $relatorio-saude-estiagem para gerar o relatório técnico municipal de saúde para estiagem seguindo o modelo oficial."
+
