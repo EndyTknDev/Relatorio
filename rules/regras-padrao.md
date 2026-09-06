@@ -89,3 +89,7 @@ Estas regras se aplicam a todas as sete skills e aos respectivos scripts de gera
 4. Reprove cortes, sobreposições, tabelas deslocadas, texto fora de células, mudanças inesperadas de paginação ou de identidade visual. Após uma correção real, renderize novamente a saída e repita a inspeção.
 5. Se não houver renderização e inspeção de todas as páginas, a saída permanece rascunho não validado. Não a entregue como final nem afirme que a estilização foi preservada. Informe o bloqueio concreto; uma verificação estrutural não substitui a visual.
 6. Confirme o hash original ao concluir e entregue apenas o DOCX aprovado. Mantenha logs e arquivos de inspeção fora de `outputs/`.
+
+### Compatibilidade com Microsoft Word
+
+Quando a edição usar manipulação direta de OOXML, reempacotamento ZIP ou quando houver qualquer indício de falha de abertura no Microsoft Word, normalize a cópia final antes da entrega com `python scripts/normalizar_docx_word.py SAIDA.docx --in-place`. O procedimento abre e salva uma cópia temporária pelo LibreOffice, valida o ZIP e reabre o resultado com `python-docx` antes da troca atômica. Depois da normalização, renderize e inspecione novamente todas as páginas. Nunca aplique a normalização ao template protegido.
